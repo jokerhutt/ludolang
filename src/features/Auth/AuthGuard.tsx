@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router";
-import { useCurrentUser } from "../../queries/useQuery/Auth/useCurrentUser";
 import { SpinnerPage } from "../../components/layouts/SpinnerPage.tsx";
+import { useQuery } from "@tanstack/react-query";
+import { qo } from "../../queries/useQuery/queries.ts";
 
 export function AuthGuard() {
   const navigate = useNavigate();
-  const { data: user, isLoading } = useCurrentUser();
+  const { data: user, isLoading } = useQuery(qo.currentUser())
 
   useEffect(() => {
     if (!isLoading && !user) {

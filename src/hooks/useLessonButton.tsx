@@ -1,7 +1,4 @@
 import { useNavigate } from "react-router";
-import { useCurrentUser } from "../queries/useQuery/Auth/useCurrentUser";
-import { useLesson } from "../queries/useQuery/useLesson";
-import { useCourseProgress } from "../queries/useQuery/useCourseProgress";
 import { useCallback, useRef, useState } from "react";
 import type { ColorType } from "../Types/ColorType";
 import {
@@ -11,9 +8,12 @@ import {
   getLessonButtonStyleState,
 } from "../util/lessonButtonUtils";
 import type { LessonType } from "../Types/LessonType";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { qo } from "../queries/useQuery/queries";
 
 type Args = {
   id: number;
+  lesson: LessonType
   unitOrderIndex: number;
   unitColor?: ColorType;
   currentLessonButtonRef: any;
@@ -38,8 +38,6 @@ export type ButtonStyleState = {
 };
 
 type useLessonButtonReturn = {
-  lesson?: LessonType;
-  isLoading: boolean;
   open: boolean;
   buttonState: LessonButtonState;
   styleState: ButtonStyleState;
@@ -54,13 +52,12 @@ export function useLessonButton({
   unitColor,
   unitOrderIndex,
   currentLessonButtonRef,
+  lesson
 }: Args): useLessonButtonReturn {
   const navigate = useNavigate();
 
-  const { data: lesson, isLoading: lessonLoading } = useLesson(id);
-  const { data: user } = useCurrentUser();
-  const { data: userCourseProgress, isLoading: userCourseProgressLoading } =
-    useCourseProgress(user?.currentCourseId);
+  const { data: user } = useSuspenseQuery(qo.currentUser())
+  const { data: userCourseProgress } = useSuspenseQuery(qo.courseProgress(user.currentCourseId))
 
   const circleRef = useRef<HTMLButtonElement | null>(null);
 
@@ -129,11 +126,7 @@ export function useLessonButton({
     [setOpen]
   );
 
-  const isLoading = lessonLoading || userCourseProgressLoading;
-
   return {
-    lesson: lesson,
-    isLoading: isLoading,
     open: open,
     buttonState: lessonButtonState,
     styleState: buttonStyleState,

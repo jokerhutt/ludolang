@@ -1,8 +1,9 @@
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { MainNavigationButtons } from "../../features/Common/MainNavigationButtons";
-import { useCurrentUser } from "../../queries/useQuery/Auth/useCurrentUser";
+import { qo } from "../../queries/useQuery/queries";
 
 export function MainLeftSidebar() {
-  const { data: currentUser } = useCurrentUser();
+  const { data: currentUser } = useSuspenseQuery(qo.currentUser())
 
   return (
     <aside className="hidden border-r border-duoGrayBorder lg:flex flex-col bg-duoBackground xl:w-80 lg:w-60 2xl:w-85">

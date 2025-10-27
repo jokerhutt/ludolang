@@ -3,13 +3,10 @@ import { UnitBanner } from "./UnitBanner.tsx";
 import { UnitPath } from "./UnitPath.tsx";
 import { useUnitObserver } from "../../effects/Observers/UnitObserver.tsx";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCourseProgress } from "../../queries/useQuery/useCourseProgress";
-import { SpinnerPage } from "../../components/layouts/SpinnerPage.tsx";
 import { useCurrentUnitStore } from "../../queries/useQuery/useCurrentUnitStore";
 import { scrollToUnit } from "../../util/scrollUtils";
 import { fadeInStagger } from "../../effects/FadeInAnimation";
 import { ScrollToLessonButton } from "./ScrollToCurrentButton.tsx";
-import { useCurrentUser } from "../../queries/useQuery/Auth/useCurrentUser";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { qo } from "../../queries/useQuery/queries.ts";
 import type { UnitType } from "../../Types/UnitType.ts";
@@ -58,6 +55,7 @@ export function SectionPage() {
                   unit={unit}
                   id={unit.id}
                   index={index}
+                  lessons={lessons.filter((lesson) => lesson.unitId == unit.id)}
                   currentLessonButtonRef={currentLessonRef}
                 />
               </motion.div>

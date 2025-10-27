@@ -5,21 +5,24 @@ import { shouldInvert } from "../../constants/lessonPositionOffsets.ts";
 import Lottie from "lottie-react";
 import type { UnitType } from "../../Types/UnitType.ts";
 import { useLottie } from "../../hooks/useLottie.tsx";
+import type { LessonType } from "../../Types/LessonType.ts";
 
 type UnitPathProps = {
   id: number;
   index: number;
   unit: UnitType;
   currentLessonButtonRef: any;
+  lessons: LessonType[]
 };
 
 export function UnitPath({
   id,
   index,
   currentLessonButtonRef,
+  lessons,
   unit,
 }: UnitPathProps) {
-  const { data: unitLessons, isLoading: lessonsLoading } = useLessonsByUnit(id);
+
 
   const animationData = useLottie(unit.animationPath);
 
@@ -27,22 +30,14 @@ export function UnitPath({
   const rightImageOffset = "ml-40 lg:ml-60";
 
   const imageOffset = shouldInvert(index) ? leftImageOffset : rightImageOffset;
-
-  if (!unit || lessonsLoading) {
-    return (
-      <div className="flex justify-center items-center py-4">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
-      </div>
-    );
-  }
-
+  
   return (
     <>
       {unit && unit.orderIndex != 1 && <SectionBreak lesson={unit.title} />}
       <div className="flex flex-col w-full items-center lg:mb-0 mt-20 lg:mt-10 space-y-6 relative">
-        {unit && unitLessons && (
+        {unit && lessons && (
           <>
-            {unitLessons.map((lesson, idx) => (
+            {lessons.map((lesson, idx) => (
               <div className="w-auto py-1" key={idx}>
                 <LessonButton
                   currentLessonButtonRef={currentLessonButtonRef}

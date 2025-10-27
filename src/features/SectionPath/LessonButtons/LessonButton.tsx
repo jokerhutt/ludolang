@@ -6,6 +6,8 @@ import type { ColorType } from "../../../Types/ColorType.ts";
 import { LessonTopPopover } from "../../../components/molecules/Popover/LessonTopPopover.tsx";
 import { UnitReviewButton } from "./UnitReviewButton.tsx";
 import { useLessonButton } from "../../../hooks/useLessonButton.tsx";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { qo } from "../../../queries/useQuery/queries.ts";
 
 type LessonButtonProps = {
   idx: number;
@@ -24,9 +26,10 @@ export function LessonButton({
   unitOrderIndex,
   currentLessonButtonRef,
 }: LessonButtonProps) {
+
+  const {data: lesson} = useSuspenseQuery(qo.lesson(id))
+
   const {
-    lesson,
-    isLoading,
     open,
     buttonState,
     styleState,
@@ -35,6 +38,7 @@ export function LessonButton({
     handleButtonClick,
     handleChangeOpen,
   } = useLessonButton({
+    lesson,
     id,
     unitOrderIndex,
     unitColor,
@@ -52,7 +56,6 @@ export function LessonButton({
   } = buttonState;
   const { lessonImage, unitColorToShow, iconOpacity, style } = styleState;
 
-  if (!isLoading && lesson)
     return (
       <div className="relative">
         {isReview && isPassedOrCurrent ? (

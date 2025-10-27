@@ -1,8 +1,9 @@
 import { useInView } from "react-intersection-observer";
-import { useCurrentUser } from "../queries/useQuery/Auth/useCurrentUser";
 import { useInfiniteList } from "../queries/useQuery/InfiniteScroll/useInfiniteList";
 import type { UserType } from "../Types/UserType"
 import { useEffect, useMemo } from "react";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { qo } from "../queries/useQuery/queries";
 
 type useLeaderboardFlowReturn = {
     currentUser: UserType;
@@ -17,7 +18,7 @@ export function useLeaderboardFlow (): useLeaderboardFlowReturn {
   const { users, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteList();
 
-  const { data: currentUser } = useCurrentUser();
+  const { data: currentUser } = useSuspenseQuery(qo.currentUser())
 
   const { ref: sentinelRef, inView: isInView } = useInView({
     rootMargin: "100px 0px",
