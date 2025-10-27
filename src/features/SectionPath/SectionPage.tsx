@@ -2,10 +2,6 @@ import { useEffect, useRef } from "react";
 import { UnitBanner } from "./UnitBanner.tsx";
 import { UnitPath } from "./UnitPath.tsx";
 import { useUnitObserver } from "../../effects/Observers/UnitObserver.tsx";
-import {
-  useSectionTree,
-  useSectionTreeData,
-} from "../../queries/useQuery/useSectionTree";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCourseProgress } from "../../queries/useQuery/useCourseProgress";
 import { SpinnerPage } from "../../components/layouts/SpinnerPage.tsx";
@@ -14,6 +10,10 @@ import { scrollToUnit } from "../../util/scrollUtils";
 import { fadeInStagger } from "../../effects/FadeInAnimation";
 import { ScrollToLessonButton } from "./ScrollToCurrentButton.tsx";
 import { useCurrentUser } from "../../queries/useQuery/Auth/useCurrentUser";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { qo } from "../../queries/useQuery/queries.ts";
+import type { UnitType } from "../../Types/UnitType.ts";
+import { useSectionTree } from "../../hooks/useSectionTree.tsx";
 
 export function SectionPage() {
   // -- REFS -- //
@@ -22,15 +22,15 @@ export function SectionPage() {
   const currentLessonRef = useRef<HTMLDivElement>(null);
 
   // -- QUERY STATE -- //
-  const { data: currentUser, isLoading: loadingUser } = useCurrentUser();
-  const { data: courseProgress } = useCourseProgress(
-    currentUser?.currentCourseId
-  );
-  const { isLoading, isError } = useSectionTree(courseProgress?.sectionId);
-  const { units } = useSectionTreeData(courseProgress?.sectionId);
+  
+  const {data: currentUser} = useSuspenseQuery(qo.currentUser())
+  const {data: courseProgress} = useSuspenseQuery(qo.courseProgress(currentUser.currentCourseId))
+  const {data: tree} = useSuspenseQuery(qo.sectionTree(courseProgress.sectionId))
+  const {units, lessons} = useSectionTree({tree})
 
   // -- THIS HANDLES THE BANNER CHANGING -- //
   const { currentUnit, setCurrentUnit } = useCurrentUnitStore();
+
   useUnitObserver(unitRefs, units ?? [], setCurrentUnit);
 
   // -- THIS MAKES IT SO THE PAGE STARTS AT THE LAST KNOWN POSITION -- //
@@ -38,9 +38,6 @@ export function SectionPage() {
     scrollToUnit(currentUnit, units, scrollContainerRef, unitRefs);
   }, []);
 
-  if (isError) return <SpinnerPage color="border-red-400" />;
-
-  if (!loadingUser && !isLoading && !!units && !!courseProgress)
     return (
       <>
         <UnitBanner currentUnit={currentUnit} />
@@ -49,7 +46,7 @@ export function SectionPage() {
           className="w-full h-full pb-20 lg:pb-0 bg-duoBackground overscroll-contain lg:overflow-visible"
         >
           <AnimatePresence>
-            {units.map((unit, index) => (
+            {units.map((unit: UnitType, index: number) => (
               <motion.div
                 key={unit.id}
                 ref={(el) => {
