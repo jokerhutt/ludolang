@@ -1,6 +1,6 @@
-import { HeartIcon } from "../../components/atoms/Icons/HeartIcon.tsx";
-import { XIcon } from "../../components/atoms/Icons/XIcon.tsx";
-import { Header } from "../../components/molecules/Header/Header.tsx";
+import { HeartIcon } from "../../Components/Atoms/Icons/HeartIcon.tsx";
+import { XIcon } from "../../Components/Atoms/Icons/XIcon.tsx";
+import { Header } from "../../Components/Molecules/Header/Header.tsx";
 import { LessonProgressBar } from "./LessonSession/LessonProgressBar.tsx";
 
 type LessonHeaderProps = {

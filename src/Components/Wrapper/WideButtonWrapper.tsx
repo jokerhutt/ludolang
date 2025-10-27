@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { ColorType } from "../../Types/ColorType";
+import type { ColorType } from "../../Types/Enum/ColorType.ts";
 
 export function WideButtonWrapper({
   children,

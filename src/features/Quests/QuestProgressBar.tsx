@@ -1,4 +1,4 @@
-import { ProgressBar } from "../../components/atoms/Bar/ProgressBar";
+import { ProgressBar } from "../../Components/Atoms/Bar/ProgressBar";
 
 type QuestProgressBarProps = {
   completed: number;

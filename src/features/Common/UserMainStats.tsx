@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router";
-import { GemsIcon } from "../../components/atoms/Icons/GemsIcon";
-import { HeartIcon } from "../../components/atoms/Icons/HeartIcon";
-import { LanguageFlag } from "../../components/atoms/Icons/LanguageFlag";
-import { StreakIcon } from "../../components/atoms/Icons/StreakIcon";
-import type { CourseProgressType } from "../../Types/CourseProgressType";
-import type { CourseType } from "../../Types/CourseType";
-import type { UserType } from "../../Types/UserType";
+import { GemsIcon } from "../../Components/Atoms/Icons/GemsIcon";
+import { HeartIcon } from "../../Components/Atoms/Icons/HeartIcon";
+import { LanguageFlag } from "../../Components/Atoms/Icons/LanguageFlag";
+import { StreakIcon } from "../../Components/Atoms/Icons/StreakIcon";
+import type { CourseProgressType } from "../../Types/User/CourseProgressType.ts";
+import type { CourseType } from "../../Types/Catalog/CourseType.ts";
+import type { UserType } from "../../Types/User/UserType.ts";
 
 type UserMainStatsProps = {
     courseObject: CourseType;

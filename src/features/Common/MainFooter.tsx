@@ -1,7 +1,7 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { Footer } from "../../components/molecules/Footer/Footer";
+import { Footer } from "../../Components/Molecules/Footer/Footer";
 import { MainNavigationButtons } from "./MainNavigationButtons";
-import { qo } from "../../queries/useQuery/queries";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
 
 export function MainFooter() {
 

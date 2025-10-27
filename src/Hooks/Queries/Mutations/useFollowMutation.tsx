@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import type { FollowMutationResponse } from "../../Types/FollowMutationResponse";
-import { qk } from "../../constants/queryKeys.ts";
-import { FOLLOW_USER, UNFOLLOW_USER } from "../../constants/paths.ts";
+import type { FollowMutationResponse } from "../../../Types/Follow/FollowMutationResponse.ts";
+import {qk} from "../../../Constants/QueryConstants/queryKeys.ts";
+import {FOLLOW_USER, UNFOLLOW_USER} from "../../../Constants/RequestConstants/paths.ts";
 
 type FollowMutationParams = {
   followedId: number;

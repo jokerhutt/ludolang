@@ -1,9 +1,9 @@
 import { useInView } from "react-intersection-observer";
-import { useInfiniteList } from "../useQuery/InfiniteScroll/useInfiniteList.tsx";
-import type { UserType } from "../../Types/UserType.ts"
+import { useInfiniteList } from "../../Queries/Infinite/useInfiniteList.tsx";
+import type { UserType } from "../../../Types/User/UserType.ts"
 import { useEffect, useMemo } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../useQuery/queries.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
 
 type useLeaderboardFlowReturn = {
     currentUser: UserType;

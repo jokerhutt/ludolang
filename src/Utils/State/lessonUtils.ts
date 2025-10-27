@@ -1,4 +1,4 @@
-import type { LessonType } from "../Types/LessonType";
+import type { LessonType } from "../../Types/Catalog/LessonType.ts";
 
 export const checkButtonStyle = (isSelected: boolean) => {
   isSelected

@@ -1,13 +1,13 @@
 import { useParams } from "react-router";
-import { SpinnerPage } from "../../../components/layouts/SpinnerPage.tsx";
-import { WideActionButton } from "../../../components/atoms/Button/WideActionButton.tsx";
+import { SpinnerPage } from "../../../Components/Layouts/SpinnerPage.tsx";
+import { WideActionButton } from "../../../Components/Atoms/Button/WideActionButton.tsx";
 import { LessonStatsGroup } from "./LessonStatsGroup.tsx";
 import { LessonCompleteCard } from "./LessonCompleteCard.tsx";
 import { StreakCompleteCard } from "./StreakCompleteCard.tsx";
 import {
   useLessonCompleteFlow,
   type LessonCompleteStats,
-} from "../../../hooks/useLessonCompleteFlow.tsx";
+} from "../../../Hooks/Logic/Lesson/useLessonCompleteFlow.tsx";
 
 export function LessonCompletePage() {
   const { lessonId } = useParams<{ lessonId: string }>();

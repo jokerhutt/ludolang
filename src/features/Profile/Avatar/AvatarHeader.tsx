@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { Header } from "../../../components/molecules/Header/Header";
+import { Header } from "../../../Components/Molecules/Header/Header";
 
 type AvatarHeaderProps = {
   currentUserId: number;

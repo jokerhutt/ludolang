@@ -1,10 +1,10 @@
 import { useNavigate, useParams } from "react-router";
-import { useCourse } from "../useQuery/useCourse.tsx";
-import { useChangeCourse } from "../mutations/useChangeCourse.tsx";
-import type { CourseType } from "../../Types/CourseType.ts";
+import { useCourse } from "../../Queries/Data/useCourse.tsx";
+import type { CourseType } from "../../../Types/Catalog/CourseType.ts";
 import { useCallback } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../useQuery/queries.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
+import {useChangeCourse} from "../../Queries/Mutations/useChangeCourse.tsx";
 
 type useCoursesFlowReturn = {
   handleSelectCourse: (courseId: number) => void;

@@ -1,21 +1,17 @@
 import { useNavigate } from "react-router";
-import { useUser } from "../../queries/useQuery/useUser.tsx";
-import type { UserType } from "../../Types/UserType.ts";
-import { FriendsListUserRowSkeleton } from "../Profile/FriendsWidget/FriendsListUserRowSkeleton.tsx";
+import {useSuspenseQuery} from "@tanstack/react-query";
+import {qo} from "../../Constants/QueryConstants/queries.ts";
 
 type UserRow = {
   userId: number;
-  userInstance?: UserType;
   specialBg?: boolean;
 };
 
-export function UserRow({ userId, specialBg, userInstance }: UserRow) {
-  const { data: user } = useUser(userId);
+export function UserRow({ userId, specialBg}: UserRow) {
+  const { data: user } = useSuspenseQuery(qo.user(userId));
   const navigate = useNavigate();
-  const realUser = !user && userInstance ? userInstance : user;
+  const realUser = user;
   const style = specialBg ? "bg-duoBlue/20" : "";
-
-  if (!realUser) return <FriendsListUserRowSkeleton />;
 
   return (
     <div
@@ -24,6 +20,7 @@ export function UserRow({ userId, specialBg, userInstance }: UserRow) {
     >
       <div className="w-20">
         <img
+          alt={`${user.username}`}
           className="w-11 h-11 object-cover rounded-full"
           src={realUser.pfpSrc}
         />

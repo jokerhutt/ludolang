@@ -1,6 +1,6 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { QuestListItem } from "./QuestListItem";
-import { qo } from "../../queries/useQuery/queries";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
 
 export function QuestListWidget() {
 

@@ -1,13 +1,13 @@
-import { CircleButton } from "../../../components/atoms/Button/CircleButton.tsx";
-import { getOffset } from "../../../constants/lessonPositionOffsets.ts";
-import LessonPopover from "../../../components/molecules/Popover/LessonPopover.tsx";
-import { CircleRing } from "../../../components/atoms/Button/CircleRing.tsx";
-import type { ColorType } from "../../../Types/ColorType.ts";
-import { LessonTopPopover } from "../../../components/molecules/Popover/LessonTopPopover.tsx";
+import { CircleButton } from "../../../Components/Atoms/Button/CircleButton.tsx";
+import { getOffset } from "../../../Constants/UIConstants/lessonPositionOffsets.ts";
+import LessonPopover from "../../../Components/Molecules/Popover/LessonPopover.tsx";
+import { CircleRing } from "../../../Components/Atoms/Button/CircleRing.tsx";
+import type { ColorType } from "../../../Types/Enum/ColorType.ts";
+import { LessonTopPopover } from "../../../Components/Molecules/Popover/LessonTopPopover.tsx";
 import { UnitReviewButton } from "./UnitReviewButton.tsx";
-import { useLessonButton } from "../../../hooks/useLessonButton.tsx";
+import { useLessonButton } from "../../../Hooks/Logic/Catalog/useLessonButton.tsx";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../../../queries/useQuery/queries.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
 
 type LessonButtonProps = {
   idx: number;

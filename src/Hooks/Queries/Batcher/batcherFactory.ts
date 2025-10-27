@@ -1,4 +1,4 @@
-import { parseIdsToRequestParam } from "../../../util/pathParsers.ts";
+import { parseIdsToRequestParam } from "../../../Utils/Text/pathParsers.ts";
 
 type CreateFn = <U, I>(args: {
   fetcher: (ids: I[]) => Promise<U[]>;

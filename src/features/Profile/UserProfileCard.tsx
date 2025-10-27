@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router";
-import type { UserType } from "../../Types/UserType";
+import type { UserType } from "../../Types/User/UserType.ts";
 import { RiPencilFill } from "react-icons/ri";
 import { UserWideImage } from "./UserWideImage";
-import type { CourseType } from "../../Types/CourseType";
-import { getJoinDate } from "../../util/dateUtiils";
+import type { CourseType } from "../../Types/Catalog/CourseType.ts";
+import { getJoinDate } from "../../Utils/Text/dateUtiils.ts";
 
 type UserProfileCardProps = {
   user: UserType;

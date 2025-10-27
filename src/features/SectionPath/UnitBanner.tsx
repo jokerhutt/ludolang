@@ -1,5 +1,5 @@
-import { RectangleButton } from "../../components/atoms/Button/RectangleButton.tsx";
-import type { UnitType } from "../../Types/UnitType.ts";
+import { RectangleButton } from "../../Components/Atoms/Button/RectangleButton.tsx";
+import type { UnitType } from "../../Types/Catalog/UnitType.ts";
 
 type UnitBannerProps = {
   currentUnit: UnitType | null;

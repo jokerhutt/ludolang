@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router";
-import type { useOptionsReturn } from "../../hooks/useOptions";
-import type { Exercise } from "../../Types/ExerciseType";
-import type { ExerciseAttemptResponse } from "../../Types/ExerciseAttemptResponse";
-import { SUBMIT_EXERCISE_ATTEMPT } from "../../constants/paths";
+import type { Exercise } from "../../../Types/Catalog/ExerciseType.ts";
+import type { ExerciseAttemptResponse } from "../../../Types/Lesson/ExerciseAttemptResponse.ts";
 import { useCallback } from "react";
+import type {useOptionsReturn} from "../../Logic/Lesson/useOptions.tsx";
+import {SUBMIT_EXERCISE_ATTEMPT} from "../../../Constants/RequestConstants/paths.ts";
 
 type Args = {
   enabled: boolean;

@@ -1,5 +1,5 @@
-import type { ColorType } from "../../../Types/ColorType";
-import { colorMap } from "../../../util/colorMap";
+import type { ColorType } from "../../../Types/Enum/ColorType.ts";
+import { colorMap } from "../../../Utils/Color/colorMap.ts";
 
 type CircleButtonProps = {
   mainColor?: string;

@@ -1,6 +1,6 @@
-import type { CourseProgressType } from "./CourseProgressType";
-import type { LessonType } from "./LessonType";
-import type { NewStreakCount } from "./NewStreakCount";
+import type { CourseProgressType } from "../User/CourseProgressType.ts";
+import type { LessonType } from "../Catalog/LessonType.ts";
+import type { NewStreakCount } from "./NewStreakCount.ts";
 
 export type LessonCompleteType = {
   userId: number;

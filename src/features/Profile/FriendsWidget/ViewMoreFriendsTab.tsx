@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { HollowedArrow } from "../../../components/atoms/HollowedArrow/HollowedArrow";
+import { HollowedArrow } from "../../../Components/Atoms/HollowedArrow/HollowedArrow";
 
 type ViewMoreFriendsTabProps = {
   show: boolean;

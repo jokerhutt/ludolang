@@ -1,9 +1,9 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import type { LessonCompleteType } from "../../Types/LessonCompleteType";
-import { SUBMIT_LESSON_COMPLETE } from "../../constants/paths.ts";
-import { qk } from "../../constants/queryKeys.ts";
-import type { UserType } from "../../Types/UserType";
-import type { LessonType } from "../../Types/LessonType";
+import type { LessonCompleteType } from "../../../Types/Lesson/LessonCompleteType.ts";
+import type { UserType } from "../../../Types/User/UserType.ts";
+import type { LessonType } from "../../../Types/Catalog/LessonType.ts";
+import {SUBMIT_LESSON_COMPLETE} from "../../../Constants/RequestConstants/paths.ts";
+import {qk} from "../../../Constants/QueryConstants/queryKeys.ts";
 
 type useLessonCompleteParams = {
   lessonId: string;

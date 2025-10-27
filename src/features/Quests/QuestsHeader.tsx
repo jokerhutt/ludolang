@@ -1,4 +1,4 @@
-import { Header } from "../../components/molecules/Header/Header";
+import { Header } from "../../Components/Molecules/Header/Header";
 
 export function QuestsHeader() {
   return (

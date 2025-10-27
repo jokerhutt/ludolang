@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import type { Exercise, ExerciseOption } from "../../Types/ExerciseType";
+import type { Exercise, ExerciseOption } from "../../Types/Catalog/ExerciseType.ts";
 import { ClozeExercise } from "./IndividualExercises/ClozeExercise";
 import { ComposeSentenceExercise } from "./IndividualExercises/ComposeSentenceExercise";
 

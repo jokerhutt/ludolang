@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import type { UnitType } from "../../../Types/UnitType.ts";
+import type { UnitType } from "../../../Types/Catalog/UnitType.ts";
 
 export function useCurrentUnitStore() {
 

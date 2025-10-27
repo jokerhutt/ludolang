@@ -1,8 +1,8 @@
 import { UserRow } from "../Common/UserRow.tsx";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeInStagger } from "../../effects/FadeInAnimation";
-import { Spinner } from "../../components/atoms/Loading/Spinner";
-import { useLeaderboardFlow } from "../../hooks/useLeaderboardFlow.tsx";
+import { fadeInStagger } from "../../Effects/FadeInAnimation.ts";
+import { Spinner } from "../../Components/Atoms/Loading/Spinner";
+import { useLeaderboardFlow } from "../../Hooks/Logic/Leaderboard/useLeaderboardFlow.tsx";
 import { LeaderboardHeader } from "./LeaderboardHeader.tsx";
 
 export function LeaderboardPage() {
@@ -21,7 +21,6 @@ export function LeaderboardPage() {
             {users.map((user) => (
               <UserRow
                 key={user.id}
-                userInstance={user}
                 userId={user.id}
                 specialBg={user.id == currentUser?.id}
               />

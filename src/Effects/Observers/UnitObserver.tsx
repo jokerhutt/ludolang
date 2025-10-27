@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import type { RefObject } from "react";
-import type { UnitType } from "../../Types/UnitType.ts";
+import type { UnitType } from "../../Types/Catalog/UnitType.ts";
 
 export function useUnitObserver(
   unitRefs: RefObject<(HTMLElement | null)[]>,

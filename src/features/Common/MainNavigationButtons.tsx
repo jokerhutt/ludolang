@@ -1,9 +1,9 @@
-import { UserChestQuestsIcon } from "../../components/atoms/Icons/UserChestQuestsIcon";
-import { UserFooterIcon } from "../../components/atoms/Icons/UserFooterIcon";
-import { UserHomeIcon } from "../../components/atoms/Icons/UserHomeIcon";
-import { UserLeagueIcon } from "../../components/atoms/Icons/UserLeagueIcon";
-import { FooterButton } from "../../components/molecules/Footer/FooterButton";
-import type { UserType } from "../../Types/UserType";
+import { UserChestQuestsIcon } from "../../Components/Atoms/Icons/UserChestQuestsIcon";
+import { UserFooterIcon } from "../../Components/Atoms/Icons/UserFooterIcon";
+import { UserHomeIcon } from "../../Components/Atoms/Icons/UserHomeIcon";
+import { UserLeagueIcon } from "../../Components/Atoms/Icons/UserLeagueIcon";
+import { FooterButton } from "../../Components/Molecules/Footer/FooterButton";
+import type { UserType } from "../../Types/User/UserType.ts";
 
 type MainNavigationButtonsProps = {
   currentUser: UserType;

@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router";
 import { useCallback, useRef, useState } from "react";
-import type { ColorType } from "../../Types/ColorType.ts";
+import type { ColorType } from "../../../Types/Enum/ColorType.ts";
 import {
   getLessonStatus,
   getPopoverStatus,
   getShouldShowTopPopover,
   getLessonButtonStyleState,
-} from "../../util/lessonButtonUtils.ts";
-import type { LessonType } from "../../Types/LessonType.ts";
+} from "../../../Utils/State/lessonButtonUtils.ts";
+import type { LessonType } from "../../../Types/Catalog/LessonType.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../useQuery/queries.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
 
 type Args = {
   id: number;

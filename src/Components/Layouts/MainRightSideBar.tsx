@@ -1,10 +1,10 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { UserMainStats } from "../../features/Common/UserMainStats";
-import { QuestListWidget } from "../../features/Quests/QuestListWidget";
-import { useCourse } from "../../Hooks/queries/useQuery/useCourse";
-import type { CourseType } from "../../Types/CourseType";
-import { ContentWidget } from "../atoms/Widget/ContentWidget";
-import { qo } from "../../Hooks/queries/useQuery/queries";
+import { UserMainStats } from "../../features/Common/UserMainStats.tsx";
+import { QuestListWidget } from "../../features/Quests/QuestListWidget.tsx";
+import { useCourse } from "../../Hooks/Queries/Data/useCourse.tsx";
+import type { CourseType } from "../../Types/Catalog/CourseType.ts";
+import { ContentWidget } from "../Atoms/Widget/ContentWidget.tsx";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
 
 export function MainRightSideBar() {
   const { data: currentUser } = useSuspenseQuery(qo.currentUser())

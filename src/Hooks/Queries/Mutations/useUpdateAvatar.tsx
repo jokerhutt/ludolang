@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { UPDATE_AVATAR } from "../../constants/paths.ts";
-import { qk } from "../../constants/queryKeys.ts";
-import type { UserType } from "../../Types/UserType";
+import type { UserType } from "../../../Types/User/UserType.ts";
+import {UPDATE_AVATAR} from "../../../Constants/RequestConstants/paths.ts";
+import {qk} from "../../../Constants/QueryConstants/queryKeys.ts";
 
 interface UpdateAvatarVariables {
   selectedAvatar: string;

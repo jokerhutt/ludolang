@@ -1,4 +1,4 @@
-import { ContentWidget } from "../../../components/atoms/Widget/ContentWidget";
+import { ContentWidget } from "../../../Components/Atoms/Widget/ContentWidget";
 
 type ProfileStatsWidgetProps = {
   iconPath: string;

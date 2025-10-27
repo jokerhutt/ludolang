@@ -1,6 +1,6 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchFollowResponse } from "./useFollowCaches.tsx";
-import { qk } from "../../../../constants/queryKeys.ts";
+import { qk } from "../../../../Constants/QueryConstants/queryKeys.ts";
 
 export function useFollowingIds(userId: number) {
   const qc = useQueryClient();

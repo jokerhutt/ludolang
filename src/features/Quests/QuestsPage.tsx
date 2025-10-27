@@ -1,4 +1,4 @@
-import { ContentWidget } from "../../components/atoms/Widget/ContentWidget";
+import { ContentWidget } from "../../Components/Atoms/Widget/ContentWidget";
 import { MonthlyChallengeCard } from "./MonthlyChallengeCard";
 import { QuestListWidget } from "./QuestListWidget";
 import { QuestsHeader } from "./QuestsHeader";

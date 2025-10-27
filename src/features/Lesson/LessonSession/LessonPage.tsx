@@ -2,15 +2,15 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { ExerciseComponent } from "../../Exercise/ExerciseComponent.tsx";
-import { SpinnerPage } from "../../../components/layouts/SpinnerPage.tsx";
-import { WideActionButton } from "../../../components/atoms/Button/WideActionButton.tsx";
+import { SpinnerPage } from "../../../Components/Layouts/SpinnerPage.tsx";
+import { WideActionButton } from "../../../Components/Atoms/Button/WideActionButton.tsx";
 import { LessonHeader } from "../LessonHeader.tsx";
 import { LessonResult } from "./LessonResult.tsx";
-import { BottomSheet } from "../../../effects/ModalSheet/BottomSheet.tsx";
+import { BottomSheet } from "../../../Effects/ModalSheet/BottomSheet.tsx";
 import { ExitConfirmationSheet } from "../ExitConfirmationSheet.tsx";
-import { useLessonFlow } from "../../../hooks/useLessonFlow.tsx";
+import { useLessonFlow } from "../../../Hooks/Logic/Lesson/useLessonFlow.tsx";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../../../queries/useQuery/queries.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
 
 export function LessonPage() {
   const { lessonId } = useParams<{ lessonId: string }>();

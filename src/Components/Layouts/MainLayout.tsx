@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
-import { MainFooter } from "../../features/Common/MainFooter";
-import { MainLeftSidebar } from "./MainLeftSideBar";
-import { MainRightSideBar } from "./MainRightSideBar";
+import { MainFooter } from "../../features/Common/MainFooter.tsx";
+import { MainLeftSidebar } from "./MainLeftSideBar.tsx";
+import { MainRightSideBar } from "./MainRightSideBar.tsx";
 
 export function MainLayout() {
   return (

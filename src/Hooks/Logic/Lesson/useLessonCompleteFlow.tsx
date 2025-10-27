@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router";
 import { useCallback, useEffect, useState } from "react";
-import { useRandomLottie } from "../../Hooks/Animation/useRandomLottie.tsx";
-import { useLottie } from "./useLottie.tsx";
-import { EL_ANIMATIONS, STREAK_ANIMATION } from "../../constants/animationPaths.ts";
-import { useLessonComplete } from "../mutations/useLessonComplete.tsx";
+import { useRandomLottie } from "../../Animation/useRandomLottie.tsx";
+import { useLottie } from "../../Animation/useLottie.tsx";
+import { EL_ANIMATIONS, STREAK_ANIMATION } from "../../../Constants/UIConstants/animationPaths.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../useQuery/queries.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
+import {useLessonComplete} from "../../Queries/Mutations/useLessonComplete.tsx";
 
 type Args = {
   lessonId?: string;

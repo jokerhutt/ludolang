@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import type { ExerciseOption } from "../../Types/ExerciseType.ts";
+import type { ExerciseOption } from "../../../Types/Catalog/ExerciseType.ts";
 
 type Args = {
   enabled: boolean;

@@ -1,5 +1,5 @@
-import type { ColorType } from "../../../Types/ColorType.ts";
-import { colorMap } from "../../../util/colorMap.ts";
+import type { ColorType } from "../../../Types/Enum/ColorType.ts";
+import { colorMap } from "../../../Utils/Color/colorMap.ts";
 import { PopoverArrow } from "./PopoverArrow.tsx";
 
 type LessonTopPopoverProps = {

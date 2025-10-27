@@ -1,8 +1,8 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import type { FollowResponse } from "../../../../Types/FollowResponse.ts";
-import { qk } from "../../../../constants/queryKeys.ts";
+import type { FollowResponse } from "../../../../Types/Follow/FollowResponse.ts";
+import { qk } from "../../../../Constants/QueryConstants/queryKeys.ts";
 import { useEffect } from "react";
-import { GET_FOLLOW_COUNTS_BY_USER_ID } from "../../../../constants/paths.ts";
+import { GET_FOLLOW_COUNTS_BY_USER_ID } from "../../../../Constants/RequestConstants/paths.ts";
 
 export function useFollowCaches(userId: number) {
   const qc = useQueryClient();

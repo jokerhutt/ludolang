@@ -1,6 +1,6 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { MainNavigationButtons } from "../../features/Common/MainNavigationButtons";
-import { qo } from "../../Hooks/queries/useQuery/queries";
+import { MainNavigationButtons } from "../../features/Common/MainNavigationButtons.tsx";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
 
 export function MainLeftSidebar() {
   const { data: currentUser } = useSuspenseQuery(qo.currentUser())

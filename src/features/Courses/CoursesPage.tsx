@@ -1,8 +1,8 @@
-import { HollowedArrow } from "../../components/atoms/HollowedArrow/HollowedArrow";
-import { LanguageFlag } from "../../components/atoms/Icons/LanguageFlag";
-import { ContentWidget } from "../../components/atoms/Widget/ContentWidget";
-import { capitalizeFirst } from "../../util/textUtils";
-import { useCoursesFlow } from "../../hooks/useCoursesFlow";
+import { HollowedArrow } from "../../Components/Atoms/HollowedArrow/HollowedArrow";
+import { LanguageFlag } from "../../Components/Atoms/Icons/LanguageFlag";
+import { ContentWidget } from "../../Components/Atoms/Widget/ContentWidget";
+import { capitalizeFirst } from "../../Utils/Text/capitalizeUtils.ts";
+import { useCoursesFlow } from "../../Hooks/Logic/Courses/useCoursesFlow.tsx";
 
 type CoursesPageProps = {
   title: string;

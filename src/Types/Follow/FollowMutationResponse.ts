@@ -1,4 +1,4 @@
-import type { FollowResponse } from "./FollowResponse"
+import type { FollowResponse } from "./FollowResponse.ts"
 
 export type FollowMutationResponse = {
     actorUserId: number;

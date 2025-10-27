@@ -1,16 +1,16 @@
 import { useEffect, useRef } from "react";
 import { UnitBanner } from "./UnitBanner.tsx";
 import { UnitPath } from "./UnitPath.tsx";
-import { useUnitObserver } from "../../effects/Observers/UnitObserver.tsx";
+import { useUnitObserver } from "../../Effects/Observers/UnitObserver.tsx";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCurrentUnitStore } from "../../queries/useQuery/useCurrentUnitStore";
-import { scrollToUnit } from "../../util/scrollUtils";
-import { fadeInStagger } from "../../effects/FadeInAnimation";
+import { useCurrentUnitStore } from "../../Hooks/Queries/Data/useCurrentUnitStore.tsx";
+import { scrollToUnit } from "../../Utils/State/scrollUtils.ts";
+import { fadeInStagger } from "../../Effects/FadeInAnimation.ts";
 import { ScrollToLessonButton } from "./ScrollToCurrentButton.tsx";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../../queries/useQuery/queries.ts";
-import type { UnitType } from "../../Types/UnitType.ts";
-import { useSectionTree } from "../../hooks/useSectionTree.tsx";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
+import type { UnitType } from "../../Types/Catalog/UnitType.ts";
+import { useSectionTree } from "../../Hooks/Logic/Catalog/useSectionTree.tsx";
 
 export function SectionPage() {
   // -- REFS -- //

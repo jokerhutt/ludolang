@@ -1,4 +1,4 @@
-import type { UserType } from "../../../Types/UserType";
+import type { UserType } from "../../../Types/User/UserType.ts";
 import { ProfileStatsWidget } from "./ProfileStatsWidget";
 
 type ProfileStatisticsGroupProps = {

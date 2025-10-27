@@ -1,8 +1,8 @@
 import { Fragment, useMemo } from "react";
-import type { Exercise, ExerciseOption } from "../../../Types/ExerciseType";
+import type { Exercise, ExerciseOption } from "../../../Types/Catalog/ExerciseType.ts";
 import { SelectionOptionButton } from "../Options/SelectionOptionButton";
 import { PromptAnswerField } from "./PromptAnswerField";
-import { getLongestOptionLength, splitPromptGaps } from "../../../util/answerFieldUtils";
+import { getLongestOptionLength, splitPromptGaps } from "../../../Utils/UI/answerFieldUtils.ts";
 
 type ExercisePrompt = {
   exercise: Exercise;

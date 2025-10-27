@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
-import { useFollowers } from "../../queries/useQuery/FollowQueries/useFollowers";
-import { useFollowingIds } from "../../queries/useQuery/FollowQueries/useFollowing";
-import { useFollowCaches } from "../../queries/useQuery/FollowQueries/useFollowCaches";
+import { useFollowers } from "../../Hooks/Queries/Data/Follow/useFollowers.tsx";
+import { useFollowingIds } from "../../Hooks/Queries/Data/Follow/useFollowing.tsx";
+import { useFollowCaches } from "../../Hooks/Queries/Data/Follow/useFollowCaches.tsx";
 import { FriendsListWidget } from "./FriendsWidget/FriendsListWidget";
 
 export function FriendsPage() {

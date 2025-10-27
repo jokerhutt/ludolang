@@ -1,5 +1,5 @@
-import { QUEST_METADATA } from "../../Types/QuestCategory";
-import type { QuestType } from "../../Types/QuestType";
+import { QUEST_METADATA } from "../../Types/Quest/QuestCategory.ts";
+import type { QuestType } from "../../Types/Quest/QuestType.ts";
 import { QuestProgressBar } from "./QuestProgressBar";
 
 type QuestListItemProps = {

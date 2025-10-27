@@ -4,8 +4,8 @@ import {
   type InfiniteData,
 } from "@tanstack/react-query";
 import { useEffect } from "react";
-import { GET_PAGINATED_LEADERBOARD } from "../../../../constants/paths.ts";
-import type { UserType } from "../../../../Types/UserType.ts";
+import { GET_PAGINATED_LEADERBOARD } from "../../../Constants/RequestConstants/paths.ts";
+import type { UserType } from "../../../Types/User/UserType.ts";
 
 type Page = { users: UserType[]; nextCursor: string | null };
 

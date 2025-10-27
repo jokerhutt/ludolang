@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
-import type { Exercise } from "../../Types/ExerciseType.ts";
-import type { ExerciseAttemptResponse } from "../../Types/ExerciseAttemptResponse.ts";
+import type { Exercise } from "../../../Types/Catalog/ExerciseType.ts";
+import type { ExerciseAttemptResponse } from "../../../Types/Lesson/ExerciseAttemptResponse.ts";
 import { useOptions, type useOptionsReturn } from "./useOptions.tsx";
-import { useSubmitExercise } from "../mutations/useSubmitExercise.tsx";
+import {useSubmitExercise} from "../../Queries/Mutations/useSubmitExercise.tsx";
 
 type useLessonFlowProps = {
   lessonId: string | undefined;

@@ -1,4 +1,4 @@
-import type { ColorType } from "./ColorType";
+import type { ColorType } from "../Enum/ColorType.ts";
 
 export type UnitType = {
   id: number;

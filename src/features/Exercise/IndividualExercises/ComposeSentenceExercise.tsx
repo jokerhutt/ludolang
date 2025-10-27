@@ -1,12 +1,12 @@
 import Lottie from "lottie-react";
-import type { Exercise, ExerciseOption } from "../../../Types/ExerciseType";
+import type { Exercise, ExerciseOption } from "../../../Types/Catalog/ExerciseType.ts";
 import { OptionsList } from "../Options/OptionsList.tsx";
 import { SelectionOptionButton } from "../Options/SelectionOptionButton";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeInStagger } from "../../../effects/FadeInAnimation";
-import { getRowsForAnswerField, splitAnswerFieldIntoRows } from "../../../util/answerFieldUtils.ts";
-import { useRandomLottie } from "../../../hooks/useRandomLottie.tsx";
-import { EX_ANIMATIONS } from "../../../constants/animationPaths.ts";
+import { fadeInStagger } from "../../../Effects/FadeInAnimation.ts";
+import { getRowsForAnswerField, splitAnswerFieldIntoRows } from "../../../Utils/UI/answerFieldUtils.ts";
+import { useRandomLottie } from "../../../Hooks/Animation/useRandomLottie.tsx";
+import { EX_ANIMATIONS } from "../../../Constants/UIConstants/animationPaths.ts";
 
 type ComponentSentenceExerciseProps = {
   exercise: Exercise;

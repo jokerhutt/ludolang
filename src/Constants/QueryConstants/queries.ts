@@ -1,15 +1,15 @@
 import { queryOptions } from "@tanstack/react-query";
-import type { LessonType } from "../../../Types/LessonType.ts";
-import type { UnitType } from "../../../Types/UnitType.ts";
-import { qk } from "../../../constants/queryKeys.ts";
+import type { LessonType } from "../../Types/Catalog/LessonType.ts";
+import type { UnitType } from "../../Types/Catalog/UnitType.ts";
+import { qk } from "./queryKeys.ts";
 import {
   lessonBatcher,
   sectionBatcher,
   unitBatcher,
   userBatcher,
-} from "../batcher/batchers.ts";
-import { getData } from "./requests.ts";
-import type { UserType } from "../../../Types/UserType.ts";
+} from "../../Hooks/Queries/Batcher/batchers.ts";
+import { getData } from "../RequestConstants/requests.ts";
+import type { UserType } from "../../Types/User/UserType.ts";
 import {
   GET_AUTH_ME,
   GET_AVATARS,
@@ -20,13 +20,13 @@ import {
   GET_MONTHLY_CHALLENGE_BY_USER_ID,
   GET_QUESTS_BY_USER_ID,
   GET_SECTION_TREE,
-} from "../../../constants/paths.ts";
-import type { SectionType } from "../../../Types/SectionType.ts";
-import type { CourseProgressType } from "../../../Types/CourseProgressType.ts";
-import type { Exercise } from "../../../Types/ExerciseType.ts";
-import type { QuestType } from "../../../Types/QuestType.ts";
-import type { FlatSectionTree } from "../../../Types/FlatSectionTree.ts";
-import type { CourseType } from "../../../Types/CourseType.ts";
+} from "../RequestConstants/paths.ts";
+import type { SectionType } from "../../Types/Catalog/SectionType.ts";
+import type { CourseProgressType } from "../../Types/User/CourseProgressType.ts";
+import type { Exercise } from "../../Types/Catalog/ExerciseType.ts";
+import type { QuestType } from "../../Types/Quest/QuestType.ts";
+import type { FlatSectionTree } from "../../Types/Catalog/FlatSectionTree.ts";
+import type { CourseType } from "../../Types/Catalog/CourseType.ts";
 
 export const qo = {
   section: (sectionId: number) =>

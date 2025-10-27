@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ContentWidget } from "../../../components/atoms/Widget/ContentWidget";
-import type { friendsTabType } from "../../../Types/friendsTabType";
+import { ContentWidget } from "../../../Components/Atoms/Widget/ContentWidget";
+import type { friendsTabType } from "../../../Types/Enum/friendsTabType.ts";
 import { FriendListTabRow } from "./FriendListTabRow";
 import { FriendsList } from "./FriendsList";
 import { ViewMoreFriendsTab } from "./ViewMoreFriendsTab";

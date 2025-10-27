@@ -3,10 +3,10 @@ import { FriendsListWidget } from "./FriendsWidget/FriendsListWidget";
 import { ProfileHeader } from "./ProfileHeader";
 import { ProfileStatisticsGroup } from "./ProfileStatsWidget/ProfileStatisticsGroup";
 import { UserProfileCard } from "./UserProfileCard";
-import { SpinnerPage } from "../../components/layouts/SpinnerPage.tsx";
+import { SpinnerPage } from "../../Components/Layouts/SpinnerPage.tsx";
 import { FollowButtonManager } from "./Follows/FollowButtonManager.tsx";
 import { LogoutButton } from "../Auth/LogoutButton.tsx";
-import { useProfilePageFlow } from "../../hooks/useProfilePageFlow.tsx";
+import { useProfilePageFlow } from "../../Hooks/Logic/Profile/useProfilePageFlow.tsx";
 
 export function ProfilePage() {
   const { userId } = useParams<{ userId: string }>();

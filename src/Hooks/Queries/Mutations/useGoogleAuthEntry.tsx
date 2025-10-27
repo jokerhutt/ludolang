@@ -1,8 +1,8 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import { useQueryClient } from "@tanstack/react-query";
-import { qk } from "../../../../constants/queryKeys.ts";
-import { GOOGLE_LOGIN } from "../../../../constants/paths.ts";
-import type { UserType } from "../../../../Types/UserType.ts";
+import { qk } from "../../../Constants/QueryConstants/queryKeys.ts";
+import { GOOGLE_LOGIN } from "../../../Constants/RequestConstants/paths.ts";
+import type { UserType } from "../../../Types/User/UserType.ts";
 
 export function useGoogleAuthEntry() {
   const queryClient = useQueryClient();

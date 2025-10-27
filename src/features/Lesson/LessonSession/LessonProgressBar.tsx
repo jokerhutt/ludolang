@@ -1,4 +1,4 @@
-import { ProgressBar } from "../../../components/atoms/Bar/ProgressBar.tsx";
+import { ProgressBar } from "../../../Components/Atoms/Bar/ProgressBar.tsx";
 
 type LessonProgressBarProps = {
   completed: number;

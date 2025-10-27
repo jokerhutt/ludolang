@@ -1,4 +1,4 @@
-import type { QuestCategory } from "./QuestCategory";
+import type { QuestCategory } from "./QuestCategory.ts";
 
 export type QuestType = {
 

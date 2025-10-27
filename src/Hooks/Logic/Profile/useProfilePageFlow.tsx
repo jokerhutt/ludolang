@@ -1,10 +1,10 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { useFollowCaches } from "../useQuery/FollowQueries/useFollowCaches.tsx";
-import { useFollowers } from "../useQuery/FollowQueries/useFollowers.tsx";
-import { useFollowingIds } from "../useQuery/FollowQueries/useFollowing.tsx";
-import type { CourseType } from "../../Types/CourseType.ts";
-import type { UserType } from "../../Types/UserType.ts";
-import { qo } from "../useQuery/queries.ts";
+import { useFollowCaches } from "../../Queries/Data/Follow/useFollowCaches.tsx";
+import { useFollowers } from "../../Queries/Data/Follow/useFollowers.tsx";
+import { useFollowingIds } from "../../Queries/Data/Follow/useFollowing.tsx";
+import type { CourseType } from "../../../Types/Catalog/CourseType.ts";
+import type { UserType } from "../../../Types/User/UserType.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
 
 type useProfilePageFlowReturn = {
   isOwnPage: boolean;

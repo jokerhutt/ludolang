@@ -1,4 +1,4 @@
-import type { Exercise, ExerciseOption } from "../../../Types/ExerciseType.ts";
+import type { Exercise, ExerciseOption } from "../../../Types/Catalog/ExerciseType.ts";
 import { SelectionOptionButton } from "./SelectionOptionButton.tsx";
 
 type OptionsListProps = {

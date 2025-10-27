@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router";
-import { SpinnerPage } from "../../components/layouts/SpinnerPage.tsx";
+import { SpinnerPage } from "../../Components/Layouts/SpinnerPage.tsx";
 import { useQuery } from "@tanstack/react-query";
-import { qo } from "../../queries/useQuery/queries.ts";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
 
 export function AuthGuard() {
   const navigate = useNavigate();

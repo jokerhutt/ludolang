@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { WideActionButton } from "../../components/atoms/Button/WideActionButton.tsx";
+import { WideActionButton } from "../../Components/Atoms/Button/WideActionButton.tsx";
 import { motion } from "framer-motion";
 
 type ExitConfirmationSheetProps = {

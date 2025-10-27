@@ -1,6 +1,6 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../../queries/useQuery/queries";
-import { getCurrentMonth } from "../../util/dateUtiils";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
+import { getCurrentMonth } from "../../Utils/Text/dateUtiils.ts";
 import { MonthlyChallengeProgressBar } from "./MonthlyChallengeProgressBar";
 
 export function MonthlyChallengeCard() {

@@ -1,4 +1,4 @@
-import type { Exercise, ExerciseOption } from "../../../Types/ExerciseType";
+import type { Exercise, ExerciseOption } from "../../../Types/Catalog/ExerciseType.ts";
 import { OptionsList } from "../Options/OptionsList.tsx";
 import { ExercisePrompt } from "../Prompt/ExercisePrompt";
 

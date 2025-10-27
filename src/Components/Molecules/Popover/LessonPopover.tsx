@@ -1,11 +1,11 @@
 import * as Popover from "@radix-ui/react-popover";
 import { useEffect, useRef } from "react";
-import type { LessonType } from "../../../Types/LessonType.ts";
-import { WideActionButton } from "../../atoms/Button/WideActionButton.tsx";
+import type { LessonType } from "../../../Types/Catalog/LessonType.ts";
+import { WideActionButton } from "../../Atoms/Button/WideActionButton.tsx";
 import { useNavigate } from "react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import type { ColorType } from "../../../Types/ColorType.ts";
-import { colorMap } from "../../../util/colorMap.ts";
+import type { ColorType } from "../../../Types/Enum/ColorType.ts";
+import { colorMap } from "../../../Utils/Color/colorMap.ts";
 
 type LessonPopoverProps = {
   lessonIndex: number;

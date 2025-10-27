@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { AvatarHeader } from "./AvatarHeader";
 import { UserWideImage } from "../UserWideImage";
-import { useUpdateAvatar } from "../../../queries/mutations/useUpdateAvatar";
 import { useNavigate } from "react-router";
-import { groupArrayElements } from "../../../util/avatarUtils";
+import { groupArrayElements } from "../../../Utils/UI/avatarUtils.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../../../queries/useQuery/queries";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
+import {useUpdateAvatar} from "../../../Hooks/Queries/Mutations/useUpdateAvatar.tsx";
 
 export function AvatarPage() {
   const { data: currentUser } = useSuspenseQuery(qo.currentUser())

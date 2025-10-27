@@ -1,4 +1,4 @@
-import { calculateBlankFieldWidth } from "../../../util/answerFieldUtils";
+import { calculateBlankFieldWidth } from "../../../Utils/UI/answerFieldUtils.ts";
 
 type PromptAnswerFieldProps = {
   show: boolean;

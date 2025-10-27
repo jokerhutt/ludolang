@@ -3,9 +3,9 @@ import type {
   FlatLesson,
   FlatSectionTree,
   FlatUnit,
-} from "../../Types/FlatSectionTree.ts";
-import { qo } from "../useQuery/queries.ts";
-import type { LessonType } from "../../Types/LessonType.ts";
+} from "../../../Types/Catalog/FlatSectionTree.ts";
+import { qo } from "../../../Constants/QueryConstants/queries.ts";
+import type { LessonType } from "../../../Types/Catalog/LessonType.ts";
 
 type Args = {
   tree: FlatSectionTree;

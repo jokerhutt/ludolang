@@ -1,4 +1,4 @@
-import type { Exercise, ExerciseOption } from "../Types/ExerciseType";
+import type { Exercise, ExerciseOption } from "../../Types/Catalog/ExerciseType.ts";
 
 export const splitPromptGaps = (exercise: Exercise, blankField: string) => {
   return exercise.prompt.split(blankField);

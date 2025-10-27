@@ -1,10 +1,10 @@
-import { Header } from "../../components/molecules/Header/Header";
-import type { CourseProgressType } from "../../Types/CourseProgressType";
-import { useCourse } from "../../queries/useQuery/useCourse";
-import type { CourseType } from "../../Types/CourseType";
+import { Header } from "../../Components/Molecules/Header/Header";
+import type { CourseProgressType } from "../../Types/User/CourseProgressType.ts";
+import { useCourse } from "../../Hooks/Queries/Data/useCourse.tsx";
+import type { CourseType } from "../../Types/Catalog/CourseType.ts";
 import { UserMainStats } from "../Common/UserMainStats";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { qo } from "../../queries/useQuery/queries";
+import { qo } from "../../Constants/QueryConstants/queries.ts";
 
 type LearnHeaderProps = {
   courseProgress: CourseProgressType;

@@ -1,4 +1,4 @@
-import { ProgressBar } from "../../components/atoms/Bar/ProgressBar";
+import { ProgressBar } from "../../Components/Atoms/Bar/ProgressBar";
 
 type MonthlyChallengeProgressBarProps = {
   completed: number;

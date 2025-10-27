@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import type { UserType } from "../../Types/UserType";
-import { qk } from "../../constants/queryKeys.ts";
-import { CHANGE_COURSE } from "../../constants/paths.ts";
-import type { CourseType } from "../../Types/CourseType";
+import type { UserType } from "../../../Types/User/UserType.ts";
+import type { CourseType } from "../../../Types/Catalog/CourseType.ts";
+import {CHANGE_COURSE} from "../../../Constants/RequestConstants/paths.ts";
+import {qk} from "../../../Constants/QueryConstants/queryKeys.ts";
 
 interface ChangeCourseVariables {
   newCourse: number;
