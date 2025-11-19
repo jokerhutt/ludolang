@@ -57,32 +57,22 @@ export function LessonButton({
 
   return (
     <div className="relative">
-      {isReview && isPassedOrCurrent ? (
-        <UnitReviewButton
-          currentLessonRef={containerRef}
-          style={style.reviewTrophy}
-          circleRef={circleRef}
-          handleButtonClick={handleButtonClick}
-          unitOrderIndex={unitOrderIndex}
-        />
-      ) : (
-        <CircleRing
+      <CircleRing
+        unitColor={unitColorToShow}
+        offset={getOffset(courseIndex, idx)}
+        show={isCurrent}
+      >
+        <CircleButton
+          icon={lessonImage}
           unitColor={unitColorToShow}
+          currentLessonRef={containerRef}
+          buttonRef={circleRef}
+          iconOpacity={iconOpacity}
+          extraStyle={`${open ? "translate-y-[5px] shadow-none" : ""}`}
+          onClick={handleButtonClick}
           offset={getOffset(courseIndex, idx)}
-          show={isCurrent}
-        >
-          <CircleButton
-            icon={lessonImage}
-            unitColor={unitColorToShow}
-            currentLessonRef={containerRef}
-            buttonRef={circleRef}
-            iconOpacity={iconOpacity}
-            extraStyle={`${open ? "translate-y-[5px] shadow-none" : ""}`}
-            onClick={handleButtonClick}
-            offset={getOffset(courseIndex, idx)}
-          />
-        </CircleRing>
-      )}
+        />
+      </CircleRing>
 
       {shouldShowBottomPopover && (
         <LessonPopover

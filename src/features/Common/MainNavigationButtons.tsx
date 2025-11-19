@@ -1,3 +1,4 @@
+import { HeroIcon } from "../../Components/Atoms/Icons/HeroIcon.tsx";
 import { UserChestQuestsIcon } from "../../Components/Atoms/Icons/UserChestQuestsIcon";
 import { UserFooterIcon } from "../../Components/Atoms/Icons/UserFooterIcon";
 import { UserHomeIcon } from "../../Components/Atoms/Icons/UserHomeIcon";
@@ -14,23 +15,20 @@ export function MainNavigationButtons({
 }: MainNavigationButtonsProps) {
   return (
     <>
-      <FooterButton path="/">
-        <UserHomeIcon />
+      <FooterButton iconName="HomeIcon" path="/">
         <p className="hidden lg:flex text-white text-xl">Learn</p>
       </FooterButton>
-      <FooterButton path="/leaderboard">
-        <UserLeagueIcon />
+      <FooterButton iconName="TrophyIcon" path="/leaderboard">
         <p className="hidden lg:flex text-white text-xl">Leaderboard</p>
       </FooterButton>
-      <FooterButton path="/quests">
-        <UserChestQuestsIcon />
+      <FooterButton iconName="ClipboardIcon" path="/quests">
         <p className="hidden lg:flex text-white text-xl">Quests</p>
       </FooterButton>
       <FooterButton
+        iconName="UserIcon"
         navigateOn={!!currentUser}
         path={currentUser ? `/profile/${currentUser.id}` : "#"}
       >
-        <UserFooterIcon />
         <p className="hidden lg:flex text-white text-xl">Profile</p>
       </FooterButton>
     </>

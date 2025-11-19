@@ -1,6 +1,6 @@
 export const colorMap: Record<string, {color: string, text: string; shadow: string; bg: string; circleShadow: string, fill: string, altBg: string, reviewTrophy: string, lightVersionText?: string}> = {
   PINK: {
-    color: "#f886d0",
+    color: "#4bb0f6",
     text: "text-main",
     shadow: "shadow-mainShadow",
     bg: "bg-main",
@@ -20,7 +20,7 @@ export const colorMap: Record<string, {color: string, text: string; shadow: stri
     reviewTrophy: "https://d35aaqx5ub95lt.cloudfront.net/images/path/trophies/49d034cef4f32ed000c8a343425e0497.svg"
   },
   GREEN: {
-    color: "#58cc04",
+    color: "#4bb0f6",
     text: "text-main",
     shadow: "shadow-mainShadow",
     bg: "bg-main",

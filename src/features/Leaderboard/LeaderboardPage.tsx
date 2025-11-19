@@ -6,12 +6,12 @@ import { useLeaderboardFlow } from "../../Hooks/Logic/Leaderboard/useLeaderboard
 import { LeaderboardHeader } from "./LeaderboardHeader.tsx";
 
 export function LeaderboardPage() {
-
-  const {currentUser, users, sentinelRef, isLoading, hasNextPage} = useLeaderboardFlow();
+  const { currentUser, users, sentinelRef, isLoading, hasNextPage } =
+    useLeaderboardFlow();
 
   return (
     <div className="w-full h-full pb-20 lg:pb-4 py-4 flex items-center flex-col">
-      <LeaderboardHeader/>
+      <LeaderboardHeader />
       {users && !isLoading && (
         <AnimatePresence>
           <motion.div

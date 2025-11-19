@@ -33,12 +33,10 @@ export const chooseLessonImage = (lesson: LessonType | undefined, isPassed: bool
     }
 
 
-    if (lesson.lessonType == "Review" && isCurrent) {
+    if (lesson.lessonType == "Review" && (isCurrent || lesson.isPassed)) {
       return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/44fdc5acd4cc2644f6c8329939446b42.svg";
     } else if (lesson.lessonType == "Review" && !lesson.isPassed) {
       return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/f4b1c683214cf55f5ddea4535b983745.svg";
-    } else if (lesson.lessonType == "Review") {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/trophies/49d034cef4f32ed000c8a343425e0497.svg";
     }
 
     return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7aa61c3f60bd961a60a46fb36e76c72f.svg";

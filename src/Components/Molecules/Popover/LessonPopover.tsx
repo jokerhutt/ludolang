@@ -96,17 +96,17 @@ export default function LessonPopover({
               contentRef.current?.contains(t) ||
               triggerRef?.current?.contains(t)
             ) {
-              e.preventDefault(); // do not close
+              e.preventDefault();
               return;
             }
-            e.preventDefault(); // cancel Radix’s immediate close
-            scheduleClose(200); // delayed close
+            e.preventDefault();
+            scheduleClose(200); 
           }}
           onFocusOutside={(e) => {
-            e.preventDefault(); // prevent immediate close on focus shift
+            e.preventDefault();
             scheduleClose(200);
           }}
-          onEscapeKeyDown={() => onOpenChange(false)} // keep ESC instant if you want
+          onEscapeKeyDown={() => onOpenChange(false)}
         >
           <AnimatePresence mode="wait">
             {open && (
@@ -128,7 +128,7 @@ export default function LessonPopover({
                   className={`flex w-full flex-col pb-4 ${
                     unitColor == "LOCKED"
                       ? style.lightVersionText
-                      : "text-duoSubText"
+                      : "text-white/80"
                   }`}
                 >
                   <div className=" text-xl font-bold">{lesson.title}</div>

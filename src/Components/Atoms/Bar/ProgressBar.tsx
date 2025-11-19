@@ -12,19 +12,18 @@ type ProgressBarProps = {
 export function ProgressBar({
   completed,
   total,
-  barColor = "bg-main",
+  barColor = "bg-mainAccent/70",
   textColor = "text-duoLightGray",
   showCountText,
   showGoldOnComplete,
   icon,
 }: ProgressBarProps) {
-
   const isComplete = completed >= total;
 
   const progressPercentage = !isComplete ? (completed / total) * 100 : 100;
 
   const barColorToShow =
-    showGoldOnComplete && completed == total ? "bg-duoGold" : barColor;
+    showGoldOnComplete && completed == total ? "bg-mainAccent" : barColor;
   const textColorToShow =
     showGoldOnComplete && completed == total ? "text-duoBackground" : textColor;
 
