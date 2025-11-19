@@ -15,9 +15,9 @@
 }
 
 @layer utilities {
-  .scrollbar-duoGreen {
+  .scrollbar-main {
     scrollbar-width: thin;
-    scrollbar-color: #58cc04 transparent;
+    scrollbar-color: #303966 transparent;
   }
 
   .scrollbar-blue::-webkit-scrollbar {
@@ -49,12 +49,16 @@
 
   --color-duoGrayButtonText: #53656d;
 
+  --color-main: #303966;
+
+  --color-gemBlue: #4bb0f6;
+
   --color-duoBackground: #141f24;
-  --color-duoGreen: #58cc04;
+  --color-duoGreen: #303966;
   --color-duoBlue: #4bb0f6;
   --color-duoGrayLocked: #37464f;
   --color-duoBlueShadow: #4099d6;
-  --color-duoGreenShadow: #59a700;
+  --color-duoGreenShadow: #c1adff;
   --color-duoGrayBorder: #37464f;
   --color-duoSubText: #d0f0c1;
   --color-duoDarkGreen: #59a601;
@@ -69,16 +73,19 @@
   --color-duoIncorrectRed: #ee5555;
   --color-duoDarkGrayAlt: #121f25;
 
-  --shadow-duoLightGreenShadow: 0 8px #79b933;
+  --shadow-duoLightGreenShadow: 0 8px #262e57;
 
   --font-din: DIN;
   --shadow-duoPinkShadow: #cc6ba7;
 
-  --shadow-duoGreenShadow: 0 5px 0 #59a700;
+  --shadow-mainShadow: 0 5px 0 #262e57;
+  --shadow-mainCircleShadow: 0 8px 0 #262e57;
+
+  --shadow-duoGreenShadow: 0 5px 0 #262e57;
   --shadow-duoPinkShadow: 0 5px 0 #cc6ba7;
   --shadow-duoGrayLockedShadow: 0 8px 0 #2b383f;
   --shadow-duoGrayLockedCircleShadow: 0 5px 0 #2b383f;
-  --shadow-duoGreenCircleShadow: 0 8px 0 #59a700;
+  --shadow-duoGreenCircleShadow: 0 8px 0 #262e57;
   --shadow-duoPinkCircleShadow: 0 8px #cc6ba7;
   --shadow-duoBlueShadow: 0 5px 0 #4099d6;
   --shadow-duoBlueCircleShadow: 0 8px #4099d6;

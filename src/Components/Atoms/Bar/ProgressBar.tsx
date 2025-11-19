@@ -12,7 +12,7 @@ type ProgressBarProps = {
 export function ProgressBar({
   completed,
   total,
-  barColor = "bg-duoGreen",
+  barColor = "bg-main",
   textColor = "text-duoLightGray",
   showCountText,
   showGoldOnComplete,
@@ -43,7 +43,7 @@ export function ProgressBar({
           </p>
         )}
       </div>
-      {icon && <img className="absolute -right-2 -bottom-1 h-7" src={icon} />}
+      {icon && <img className="absolute -right-2 -bottom-1 h-9" src={icon} />}
     </div>
   );
 }

@@ -19,10 +19,10 @@ export function FooterButton({
       ? location.pathname === "/"
       : location.pathname.includes(path);
 
-  const style = isActive ? "border border-duoBlue/80 bg-duoBlue/8" : "";
+  const style = isActive ? "border border-main/80 bg-main/8" : "";
   const baseStyle = "p-2 rounded-lg";
   const hoverStyle = isActive
-    ? "hover:bg-duoBlue/20"
+    ? "hover:bg-main/20"
     : "hover:bg-duoGrayButtonText/30";
 
   const handleNavigation = () => {

@@ -1,25 +1,31 @@
+import type { IconName } from "../../Components/Atoms/Icons/HeroIcon";
+
 export type QuestCategory = "STREAK" | "ACCURACY" | "PERFECT";
 
 export type QuestMetaData = {
   title: string;
   description: string;
-  iconUrl: string;
+  iconUrl: IconName;
+  color: string;
 };
 
 export const QUEST_METADATA: Record<QuestCategory, QuestMetaData> = {
   STREAK: {
     title: "Extend your streak",
     description: "Extend your streak.",
-    iconUrl: "/icon-images/QUEST_STREAK.svg",
+    iconUrl: "FireIcon",
+    color: "text-orange-400"
   },
   ACCURACY: {
     title: "High accuracy",
     description: "Score 90% or higher in 2 lessons.",
-    iconUrl: "/icon-images/QUEST_ACCURACY.svg",
+    iconUrl: "BoltIcon" ,
+    color: "text-green-400"
   },
   PERFECT: {
     title: "Perfect lesson",
     description: "Get 1 perfect lesson.",
-    iconUrl: "/icon-images/QUEST_PERFECT.svg",
+    iconUrl: "TrophyIcon",
+    color: "text-duoGold"
   },
 };

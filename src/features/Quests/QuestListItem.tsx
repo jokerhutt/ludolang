@@ -1,3 +1,4 @@
+import { HeroIcon } from "../../Components/Atoms/Icons/HeroIcon.tsx";
 import { QUEST_METADATA } from "../../Types/Quest/QuestCategory.ts";
 import type { QuestType } from "../../Types/Quest/QuestType.ts";
 import { QuestProgressBar } from "./QuestProgressBar";
@@ -18,7 +19,7 @@ export function QuestListItem({ quest }: QuestListItemProps) {
   return (
     <div className={`w-full flex items-center py-7 ${showBottomBorder}`}>
       <div className="w-20">
-        <img className="h-16" src={metaData.iconUrl} />
+        <HeroIcon className={`h-12 ${metaData.color}`} solid iconName={metaData.iconUrl} />
       </div>
 
       <div className="flex flex-col w-3/4 justify-between gap-3">

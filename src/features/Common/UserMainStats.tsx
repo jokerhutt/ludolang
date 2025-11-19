@@ -21,7 +21,7 @@ export function UserMainStats({courseObject, courseProgress, currentUser}: UserM
     <div className="flex w-full justify-between">
       <div className="flex gap-3 items-center">
         <div className="hover:cursor-pointer" onClick={() => navigate("/courses")}>
-          <LanguageFlag height="h-8" icon={courseObject?.imgSrc} />
+          <LanguageFlag height="h-5" icon={courseObject?.imgSrc} />
         </div>
         <p className="text-xl text-white">{courseProgress.completedLessons}</p>
       </div>
@@ -29,12 +29,12 @@ export function UserMainStats({courseObject, courseProgress, currentUser}: UserM
         <StreakIcon />
         <p className="text-xl text-duoOrange">{currentUser.streakLength}</p>
       </div>
-      <div className="flex gap-1 items-center">
+      <div className="flex gap-2 items-center">
         <GemsIcon />
         <p className="text-xl text-duoBlue">{currentUser.points}</p>
       </div>
 
-      <div className="flex gap-1 items-center">
+      <div className="flex gap-2 items-center">
         <HeartIcon />
         <p className="text-2xl text-duoRed">∞</p>
       </div>

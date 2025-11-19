@@ -21,7 +21,7 @@ export function WideActionButton({
   activeText = "Continue",
   height = "h-14",
   icon,
-  activeColor = "active:shadow-none active:translate-y-[5px] shadow-duoGreenShadow bg-duoGreen",
+  activeColor = "active:shadow-none active:translate-y-[5px] shadow-duoGreenShadow bg-main",
   disabledColor = "bg-duoGrayBorder",
   activeTextColor = "text-duoGrayButtonText",
   incorrectColor = "bg-duoRed",
