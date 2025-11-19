@@ -21,7 +21,7 @@ export function UserMainStats({
   const navigate = useNavigate();
 
   return (
-    <div className="flex w-full justify-between">
+    <div className="flex w-full lg:justify-start lg:gap-8 justify-between">
       <div className="flex gap-3 items-center">
         <div
           className="hover:cursor-pointer"
@@ -37,7 +37,7 @@ export function UserMainStats({
       </div>
       <div className="flex gap-2 items-center">
         <GemsIcon />
-        <p className="text-xl text-duoBlue">{currentUser.points}</p>
+        <p className="text-xl text-mainAccent">{currentUser.points}</p>
       </div>
     </div>
   );

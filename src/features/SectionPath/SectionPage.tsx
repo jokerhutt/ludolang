@@ -19,11 +19,15 @@ export function SectionPage() {
   const currentLessonRef = useRef<HTMLDivElement>(null);
 
   // -- QUERY STATE -- //
-  
-  const {data: currentUser} = useSuspenseQuery(qo.currentUser())
-  const {data: courseProgress} = useSuspenseQuery(qo.courseProgress(currentUser.currentCourseId))
-  const {data: tree} = useSuspenseQuery(qo.sectionTree(courseProgress.sectionId))
-  const {units, lessons} = useSectionTree({tree})
+
+  const { data: currentUser } = useSuspenseQuery(qo.currentUser());
+  const { data: courseProgress } = useSuspenseQuery(
+    qo.courseProgress(currentUser.currentCourseId)
+  );
+  const { data: tree } = useSuspenseQuery(
+    qo.sectionTree(courseProgress.sectionId)
+  );
+  const { units, lessons } = useSectionTree({ tree });
 
   // -- THIS HANDLES THE BANNER CHANGING -- //
   const { currentUnit, setCurrentUnit } = useCurrentUnitStore();
@@ -35,36 +39,36 @@ export function SectionPage() {
     scrollToUnit(currentUnit, units, scrollContainerRef, unitRefs);
   }, []);
 
-    return (
-      <>
-        <UnitBanner currentUnit={currentUnit} />
-        <div
-          ref={scrollContainerRef}
-          className="w-full h-full pb-20 lg:pb-0 bg-duoBackground overscroll-contain lg:overflow-visible"
-        >
-          <AnimatePresence>
-            {units.map((unit: UnitType, index: number) => (
-              <motion.div
-                key={unit.id}
-                ref={(el) => {
-                  unitRefs.current[index] = el;
-                }}
-                {...fadeInStagger(index)}
-              >
-                <UnitPath
-                  unit={unit}
-                  index={index}
-                  lessons={lessons.filter((lesson) => lesson.unitId == unit.id)}
-                  currentLessonButtonRef={currentLessonRef}
-                />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-        <ScrollToLessonButton
-          rootRef={scrollContainerRef}
-          currentLessonRef={currentLessonRef}
-        />
-      </>
-    );
+  return (
+    <>
+      <UnitBanner currentUnit={currentUnit} />
+      <div
+        ref={scrollContainerRef}
+        className="w-full h-full pb-20 lg:pb-0 bg-duoBackground overscroll-contain lg:overflow-visible"
+      >
+        <AnimatePresence>
+          {units.map((unit: UnitType, index: number) => (
+            <motion.div
+              key={unit.id}
+              ref={(el) => {
+                unitRefs.current[index] = el;
+              }}
+              {...fadeInStagger(index)}
+            >
+              <UnitPath
+                unit={unit}
+                index={index}
+                lessons={lessons.filter((lesson) => lesson.unitId == unit.id)}
+                currentLessonButtonRef={currentLessonRef}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+      <ScrollToLessonButton
+        rootRef={scrollContainerRef}
+        currentLessonRef={currentLessonRef}
+      />
+    </>
+  );
 }

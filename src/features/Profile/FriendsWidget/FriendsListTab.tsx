@@ -13,7 +13,7 @@ export function FriendsListTab({
 }: FriendsListTabProps) {
   const isActive = activeTab == tabType;
   const bottomBorderColor = isActive
-    ? "border-b-duoBlue"
+    ? "border-b-mainAccent"
     : "border-b-duoGrayBorder";
 
   return (
@@ -21,7 +21,7 @@ export function FriendsListTab({
       onClick={onClick}
       className={`w-full hover:cursor-pointer flex border-b py-2 ${bottomBorderColor} items-center justify-center`}
     >
-      <p className="text-duoBlue">{tabType}</p>
+      <p className="text-mainAccent">{tabType}</p>
     </div>
   );
 }

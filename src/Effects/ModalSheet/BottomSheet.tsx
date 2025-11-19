@@ -17,7 +17,7 @@ export function BottomSheet({
   key,
   onClose,
   children,
-  bgColor="bg-duoDarkGray"
+  bgColor="bg-main"
 }: BottomSheetProps) {
   const fullScreenStyle = "absolute";
   const normalStyle = "absolute lg:fixed";
@@ -27,7 +27,7 @@ export function BottomSheet({
   return (
     <AnimatePresence>
       {isActive && (
-        <motion.div onClick={onClose} className={`${isFullScreen ? "fixed h-full w-full z-40 bg-black/20" : ""}`}>
+        <motion.div onClick={onClose} className={`${isFullScreen ? "fixed h-full w-full z-40 bg-mainAccent/20" : ""}`}>
           <motion.div
             onClick={(e) => e.stopPropagation()}
             className={`${style} inset-x-0 bottom-0 ${bgColor}`}

@@ -52,10 +52,11 @@
   --color-main: #303966;
   --color-mainDark: #22273e;
   --color-mainAccent: #c1adff;
+  --color-mainAlt: #3a426c;
 
   --color-gemBlue: #4bb0f6;
 
-  --color-duoBackground: #141f24;
+  --color-duoBackground: #22273e;
   --color-duoGreen: #303966;
   --color-duoBlue: #4bb0f6;
   --color-duoGrayLocked: #37464f;

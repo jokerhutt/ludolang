@@ -1,3 +1,4 @@
+import type { IconName } from "../../Components/Atoms/Icons/HeroIcon.tsx";
 import type { LessonType } from "../../Types/Catalog/LessonType.ts";
 
 export const checkButtonStyle = (isSelected: boolean) => {
@@ -8,37 +9,70 @@ export const checkButtonStyle = (isSelected: boolean) => {
 
 //TODO add some kind of constants for these urls
 //TODO ENUM??
-export const chooseLessonImage = (lesson: LessonType | undefined, isPassed: boolean, isCurrent: boolean, isVeryFirstLesson: boolean) => {
-    if (!lesson || !lesson.lessonType || !lesson.orderIndex || !lesson.id)
-      return "";
+export const chooseLessonImage = (
+  lesson: LessonType | undefined,
+  isPassed: boolean,
+  isCurrent: boolean,
+  isVeryFirstLesson: boolean
+) => {
+  if (!lesson || !lesson.lessonType || !lesson.orderIndex || !lesson.id)
+    return "";
 
-    if (isVeryFirstLesson && !isPassed) {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ef9c771afdb674f0ff82fae25c6a7b0a.svg"
-    }
+  if (isVeryFirstLesson && !isPassed) {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ef9c771afdb674f0ff82fae25c6a7b0a.svg";
+  }
 
-    if (lesson.orderIndex == 1 && !isPassed) {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/5e4203031e39fc43d94371565fd0d369.svg";
-    }
+  if (lesson.orderIndex == 1 && !isPassed) {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/5e4203031e39fc43d94371565fd0d369.svg";
+  }
 
-    if (lesson.lessonType == "Lesson" && isPassed && !isCurrent) {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/bfa591f6854b4de08e1656b3e8ca084f.svg";
-    }
-    
-    if (lesson.lessonType == "Lesson" && isCurrent) {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ef9c771afdb674f0ff82fae25c6a7b0a.svg"
-    } 
-    
-    if (lesson.lessonType == "Lesson") {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/cbb0e971ac10030a120848c71c419892.svg"
-    }
+  if (lesson.lessonType == "Lesson" && isPassed && !isCurrent) {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/bfa591f6854b4de08e1656b3e8ca084f.svg";
+  }
 
+  if (lesson.lessonType == "Lesson" && isCurrent) {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ef9c771afdb674f0ff82fae25c6a7b0a.svg";
+  }
 
-    if (lesson.lessonType == "Review" && (isCurrent || lesson.isPassed)) {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/44fdc5acd4cc2644f6c8329939446b42.svg";
-    } else if (lesson.lessonType == "Review" && !lesson.isPassed) {
-      return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/f4b1c683214cf55f5ddea4535b983745.svg";
-    }
+  if (lesson.lessonType == "Lesson") {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/cbb0e971ac10030a120848c71c419892.svg";
+  }
 
-    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7aa61c3f60bd961a60a46fb36e76c72f.svg";
-}
+  if (lesson.lessonType == "Review" && (isCurrent || lesson.isPassed)) {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/44fdc5acd4cc2644f6c8329939446b42.svg";
+  } else if (lesson.lessonType == "Review" && !lesson.isPassed) {
+    return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/f4b1c683214cf55f5ddea4535b983745.svg";
+  }
 
+  return "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7aa61c3f60bd961a60a46fb36e76c72f.svg";
+};
+
+export const chooseLessonIcon = (
+  lesson: LessonType | undefined,
+  isPassed: boolean,
+  isCurrent: boolean,
+  isVeryFirstLesson: boolean
+): IconName | null => {
+  if (!lesson || !lesson.lessonType || !lesson.orderIndex || !lesson.id)
+    return null;
+
+  if (isVeryFirstLesson && !isPassed) {
+    return "StarIcon";
+  }
+
+  if (lesson.orderIndex == 1 && !isPassed) {
+    return "StarIcon";
+  }
+
+  if (lesson.lessonType == "Lesson" && isPassed && !isCurrent) {
+    return "CheckIcon";
+  }
+
+  if (lesson.lessonType == "Lesson" && isCurrent) {
+    return "StarIcon";
+  }
+
+  if (lesson?.lessonType == "Review") {
+    return "TrophyIcon"
+  } else return "BookOpenIcon";
+};

@@ -10,6 +10,7 @@ import {
 import type { LessonType } from "../../../Types/Catalog/LessonType.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { qo } from "../../../Constants/QueryConstants/queries.ts";
+import type { IconName } from "../../../Components/Atoms/Icons/HeroIcon.tsx";
 
 type Args = {
   id: number;
@@ -31,7 +32,7 @@ export type LessonButtonState = {
 };
 
 export type ButtonStyleState = {
-  lessonImage: string;
+  lessonImage: IconName | null;
   unitColorToShow: ColorType | undefined;
   iconOpacity: string;
   style: any;

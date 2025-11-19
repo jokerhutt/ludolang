@@ -30,7 +30,7 @@ export function ProgressBar({
   return (
     <div className="w-full relative">
       <div
-        className={`w-full rounded-full flex items-center justify-center bg-duoGrayLocked h-5 overflow-hidden`}
+        className={`w-full rounded-full flex items-center justify-center bg-mainAlt h-5 overflow-hidden`}
       >
         <div
           className={`absolute ${barColorToShow} left-0 top-0 h-full transition-all duration-300 rounded-full`}

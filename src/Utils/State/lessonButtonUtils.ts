@@ -2,7 +2,7 @@ import type { ButtonStyleState } from "../../Hooks/Logic/Catalog/useLessonButton
 import type { ColorType } from "../../Types/Enum/ColorType.ts";
 import type { LessonType, TypeOfLesson } from "../../Types/Catalog/LessonType.ts";
 import { colorMap } from "../Color/colorMap.ts";
-import { chooseLessonImage } from "./lessonUtils.ts";
+import { chooseLessonIcon, chooseLessonImage } from "./lessonUtils.ts";
 
 export const getLessonIconOpacity = (isLocked: boolean) =>
   !isLocked ? "" : "brightness-50";
@@ -44,7 +44,7 @@ export const getLessonButtonColor = (isLocked?: boolean, unitColor?: ColorType) 
 
 export const getLessonButtonStyleState = (unitColor: ColorType | undefined, isLocked: boolean, isPassedOrCurrent: boolean, isCurrent: boolean, isFirstInSection: boolean, lesson?: LessonType): ButtonStyleState => {
     const iconOpacity = getLessonIconOpacity(isLocked);
-    const lessonImage = chooseLessonImage(lesson, isPassedOrCurrent, isCurrent, isFirstInSection)
+    const lessonImage = chooseLessonIcon(lesson, isPassedOrCurrent, isCurrent, isFirstInSection)
     const unitColorToShow = getLessonButtonColor(isLocked, unitColor);
     const style = getLessonButtonStyle(unitColor);
 

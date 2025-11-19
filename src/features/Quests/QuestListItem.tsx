@@ -18,11 +18,7 @@ export function QuestListItem({ quest }: QuestListItemProps) {
 
   return (
     <div className={`w-full flex items-center py-7 ${showBottomBorder}`}>
-      <div className="w-20">
-        <HeroIcon className={`h-12 ${metaData.color}`} solid iconName={metaData.iconUrl} />
-      </div>
-
-      <div className="flex flex-col w-3/4 justify-between gap-3">
+      <div className="flex flex-col w-full justify-between gap-4">
         <div className="w-full text-white text-xl">
           <p>{metaData.description}</p>
         </div>

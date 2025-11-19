@@ -1,11 +1,12 @@
 import type { ColorType } from "../../../Types/Enum/ColorType.ts";
 import { colorMap } from "../../../Utils/Color/colorMap.ts";
+import { HeroIcon, type IconName } from "../Icons/HeroIcon.tsx";
 
 type CircleButtonProps = {
   mainColor?: string;
   unitColor?: ColorType;
   shadowColor?: string;
-  icon?: string;
+  icon?: IconName | null;
   offset?: string;
   iconOpacity?: string;
   onClick: () => void;
@@ -39,11 +40,12 @@ export function CircleButton({
         `}
         style={{ transition: "transform 0.2s" }}
       >
-        <img
-          ref={currentLessonRef}
-          src={icon}
-          className={`flex items-center ${iconOpacity} justify-center rounded-full`}
-        />
+        <div ref={currentLessonRef}>
+          <HeroIcon
+            iconName={icon ?? "CheckIcon"}
+            className={`flex items-center ${iconOpacity} h-7 justify-center text-white rounded-full`}
+          />
+        </div>
       </button>
     </>
   );

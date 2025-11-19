@@ -9,6 +9,6 @@ export function LessonProgressBar({
   completed,
   total,
 }: LessonProgressBarProps) {
-  const bgcolor = "bg-duoGreen";
+  const bgcolor = "bg-mainAccent";
   return <ProgressBar completed={completed} total={total} barColor={bgcolor} />;
 }

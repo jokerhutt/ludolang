@@ -18,7 +18,6 @@ export function UserProfileCard({
   userCourseInstances,
   isOwnPage,
 }: UserProfileCardProps) {
-
   const joinDate = getJoinDate(user.createdAt);
   const navigate = useNavigate();
 
@@ -52,7 +51,7 @@ export function UserProfileCard({
             <p className="text-duoLightGray text-lg font-light">
               Joined {joinDate}
             </p>
-            <p className="text-duoBlue">{followers} Followers</p>
+            <p className="text-mainAccent">{followers} Followers</p>
           </div>
         </div>
         <div className="w-full flex flex-col justify-end items-end">

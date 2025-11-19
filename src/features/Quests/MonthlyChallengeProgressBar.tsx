@@ -9,8 +9,10 @@ export function MonthlyChallengeProgressBar({
   completed,
   total,
 }: MonthlyChallengeProgressBarProps) {
-  const chestIcon =
-    "https://d35aaqx5ub95lt.cloudfront.net/images/58175d43db9f94dc1d83cd35d63ef58d.svg";
+
+  const fullyComplete = completed >= total
+
+  const starIcon = completed ? "/icon-images/STAR_COMPLETE.svg" : "/icon-images/STAR_INCOMPLETE.svg"
 
   const bgcolor = "text-duoBackground bg-mainAccent";
 
@@ -21,7 +23,7 @@ export function MonthlyChallengeProgressBar({
       barColor={bgcolor}
       showGoldOnComplete={true}
       showCountText={true}
-      icon={chestIcon}
+      icon={starIcon}
     />
   );
 }

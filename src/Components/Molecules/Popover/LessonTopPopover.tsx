@@ -15,7 +15,6 @@ export function LessonTopPopover({
   lessonStatus,
   offset,
 }: LessonTopPopoverProps) {
-  const style = colorMap[unitColor];
   const text = lessonStatus == "CURRENT" ? "START" : "JUMP HERE?";
 
   return (
@@ -26,7 +25,7 @@ export function LessonTopPopover({
             className={`rounded-xl bg-duoBackground border ${offset} border-duoGrayBorder py-2 px-4 shadow-lg bob`}
           >
             <div
-              className={`flex w-full text-lg text-center font-bold whitespace-nowrap ${style.text}`}
+              className={`flex w-full text-lg text-center font-bold whitespace-nowrap text-mainAccent`}
             >
               {text}
             </div>

@@ -17,7 +17,7 @@ export function LessonPage() {
   const { position } = useParams<{ position: string }>();
   const id = Number(lessonId);
 
-  const { data: exercises, isLoading } = useSuspenseQuery(qo.exercises(id))
+  const { data: exercises, isLoading } = useSuspenseQuery(qo.exercises(id));
 
   const { lessonResponse, submitAnswer, optsState } = useLessonFlow({
     lessonId: lessonId,
@@ -56,6 +56,8 @@ export function LessonPage() {
             height={"h-14 lg:w-40"}
             text="Check"
             onSubmit={() => submitAnswer()}
+            activeTextColor={`${lessonResponse?.correct == true ? "text-black" : "text-white"}`}
+            activeColor={`active:shadow-none active:translate-y-[5px] shadow-mainShadow ${lessonResponse?.correct == true ? "bg-duoLightGreen" : "bg-main"} `}
             isActive={!intendsToExit && currentSelectedOptions.length > 0}
             isIncorrect={!intendsToExit && lessonResponse?.correct == false}
           />
@@ -79,7 +81,7 @@ export function LessonPage() {
         onClose={() => setIntendsToExit(false)}
         isFullScreen={true}
         key={1}
-        bgColor="bg-duoDarkGrayAlt"
+        bgColor="bg-main"
       >
         <ExitConfirmationSheet
           setIntendsToExit={() => setIntendsToExit(false)}
