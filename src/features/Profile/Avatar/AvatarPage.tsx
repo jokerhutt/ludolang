@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AvatarHeader } from "./AvatarHeader";
 import { UserWideImage } from "../UserWideImage";
 import { useNavigate } from "react-router";
-import { groupArrayElements } from "../../../Utils/UI/avatarUtils.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { qo } from "../../../Constants/QueryConstants/queries.ts";
 import { useUpdateAvatar } from "../../../Hooks/Queries/Mutations/useUpdateAvatar.tsx";
@@ -12,7 +11,6 @@ export function AvatarPage() {
   const { data: avatars } = useSuspenseQuery(qo.avatars());
   const navigate = useNavigate();
 
-  const avatarPairs = groupArrayElements(2, avatars);
 
   const [selectedAvatar, setSelectedAvatar] = useState(currentUser.pfpSrc);
 

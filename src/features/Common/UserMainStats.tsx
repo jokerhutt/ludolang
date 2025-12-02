@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router";
 import { GemsIcon } from "../../Components/Atoms/Icons/GemsIcon";
-import { HeartIcon } from "../../Components/Atoms/Icons/HeartIcon";
 import { LanguageFlag } from "../../Components/Atoms/Icons/LanguageFlag";
 import { StreakIcon } from "../../Components/Atoms/Icons/StreakIcon";
 import type { CourseProgressType } from "../../Types/User/CourseProgressType.ts";

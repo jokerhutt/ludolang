@@ -4,7 +4,6 @@ import LessonPopover from "../../../Components/Molecules/Popover/LessonPopover.t
 import { CircleRing } from "../../../Components/Atoms/Button/CircleRing.tsx";
 import type { ColorType } from "../../../Types/Enum/ColorType.ts";
 import { LessonTopPopover } from "../../../Components/Molecules/Popover/LessonTopPopover.tsx";
-import { UnitReviewButton } from "./UnitReviewButton.tsx";
 import { useLessonButton } from "../../../Hooks/Logic/Catalog/useLessonButton.tsx";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { qo } from "../../../Constants/QueryConstants/queries.ts";
@@ -45,15 +44,13 @@ export function LessonButton({
   });
   const {
     isCurrent,
-    isPassedOrCurrent,
-    isReview,
     lessonStatus,
     popoverStatus,
     shouldShowBottomPopover,
     shouldShowTopPopover,
     shouldOpenTopPopover,
   } = buttonState;
-  const { lessonImage, unitColorToShow, iconOpacity, style } = styleState;
+  const { lessonImage, unitColorToShow, iconOpacity } = styleState;
 
   return (
     <div className="relative">

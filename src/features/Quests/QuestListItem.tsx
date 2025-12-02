@@ -1,4 +1,3 @@
-import { HeroIcon } from "../../Components/Atoms/Icons/HeroIcon.tsx";
 import { QUEST_METADATA } from "../../Types/Quest/QuestCategory.ts";
 import type { QuestType } from "../../Types/Quest/QuestType.ts";
 import { QuestProgressBar } from "./QuestProgressBar";

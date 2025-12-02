@@ -1,5 +1,4 @@
 import type { ColorType } from "../../../Types/Enum/ColorType.ts";
-import { colorMap } from "../../../Utils/Color/colorMap.ts";
 import { PopoverArrow } from "./PopoverArrow.tsx";
 
 type LessonTopPopoverProps = {
@@ -11,7 +10,6 @@ type LessonTopPopoverProps = {
 
 export function LessonTopPopover({
   open,
-  unitColor = "LOCKED",
   lessonStatus,
   offset,
 }: LessonTopPopoverProps) {

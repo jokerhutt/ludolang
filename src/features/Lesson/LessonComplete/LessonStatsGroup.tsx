@@ -1,7 +1,5 @@
 import { GemsIcon } from "../../../Components/Atoms/Icons/GemsIcon.tsx";
-import { LightningIcon } from "../../../Components/Atoms/Icons/LightningIcon.tsx";
 import { ScoreTargetIcon } from "../../../Components/Atoms/Icons/ScoreTargetIcon.tsx";
-import { StreakIcon } from "../../../Components/Atoms/Icons/StreakIcon.tsx";
 import { LessonStatsCard } from "./LessonStatsCard.tsx";
 
 type LessonStatsGroupProps = {

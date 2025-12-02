@@ -1,8 +1,3 @@
-import { HeroIcon } from "../../Components/Atoms/Icons/HeroIcon.tsx";
-import { UserChestQuestsIcon } from "../../Components/Atoms/Icons/UserChestQuestsIcon";
-import { UserFooterIcon } from "../../Components/Atoms/Icons/UserFooterIcon";
-import { UserHomeIcon } from "../../Components/Atoms/Icons/UserHomeIcon";
-import { UserLeagueIcon } from "../../Components/Atoms/Icons/UserLeagueIcon";
 import { FooterButton } from "../../Components/Molecules/Footer/FooterButton";
 import type { UserType } from "../../Types/User/UserType.ts";
 

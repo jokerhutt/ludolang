@@ -6,11 +6,7 @@
 
 ## Important
 
-I made this project a while ago and there are some architectural choices I regret. I will slowly work on cleaning up this project and adding more documentation. 
-
-## Preview 🎬
-
-https://github.com/user-attachments/assets/a8027165-e932-4d14-a1b0-4be864bd2ee3
+I made this project a while ago and there are some architectural choices I regret. I will slowly work on cleaning up this project and adding more documentation.
 
 ## Setup and Installation
 
@@ -50,6 +46,7 @@ https://github.com/user-attachments/assets/a8027165-e932-4d14-a1b0-4be864bd2ee3
 ## Structure and Notes
 
 ### **Content Hierarchy**
+
 Course → Section → Unit → Lesson → Exercise
 
 ### **Mutations (POST REQUESTS)**
@@ -63,4 +60,3 @@ Mutations can be found under src/queries/mutations
 | Submitting a lesson completion | useLessonComplete |
 | Changing course | useChangeCourse |
 | Follow / Unfollow | useFollowUser |
-

@@ -10,8 +10,6 @@ export function MonthlyChallengeProgressBar({
   total,
 }: MonthlyChallengeProgressBarProps) {
 
-  const fullyComplete = completed >= total
-
   const starIcon = completed ? "/icon-images/STAR_COMPLETE.svg" : "/icon-images/STAR_INCOMPLETE.svg"
 
   const bgcolor = "text-mainDark bg-mainAccent";
