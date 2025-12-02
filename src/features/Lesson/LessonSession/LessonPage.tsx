@@ -56,8 +56,12 @@ export function LessonPage() {
             height={"h-14 lg:w-40"}
             text="Check"
             onSubmit={() => submitAnswer()}
-            activeTextColor={`${lessonResponse?.correct == true ? "text-black" : "text-white"}`}
-            activeColor={`active:shadow-none active:translate-y-[5px] shadow-mainShadow ${lessonResponse?.correct == true ? "bg-duoLightGreen" : "bg-main"} `}
+            activeTextColor={`${
+              lessonResponse?.correct == true ? "text-black" : "text-white"
+            }`}
+            activeColor={`active:shadow-none active:translate-y-[5px] shadow-mainShadow ${
+              lessonResponse?.correct == true ? "bg-mainAccent" : "bg-main"
+            } `}
             isActive={!intendsToExit && currentSelectedOptions.length > 0}
             isIncorrect={!intendsToExit && lessonResponse?.correct == false}
           />

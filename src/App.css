@@ -53,45 +53,23 @@
   --color-mainDark: #22273e;
   --color-mainAccent: #c1adff;
   --color-mainAlt: #3a426c;
+  --color-darkGreen: #59a601;
 
-  --color-gemBlue: #4bb0f6;
-
-  --color-duoBackground: #22273e;
-  --color-duoGreen: #303966;
-  --color-duoBlue: #4bb0f6;
   --color-duoGrayLocked: #37464f;
-  --color-duoBlueShadow: #4099d6;
-  --color-duoGreenShadow: #c1adff;
   --color-duoGrayBorder: #37464f;
   --color-duoSubText: #d0f0c1;
-  --color-duoDarkGreen: #59a601;
   --color-duoGold: #ffd401;
   --color-duoLightGray: #adaeae;
   --color-duoGold: #fec700;
-  --color-duoLightGreen: #93d333;
-  --color-duoPink: #f886d0;
-  --color-duoOrange: #f5a632;
   --color-duoRed: #ff4c4b;
-  --color-duoDarkGray: #202f36;
-  --color-duoIncorrectRed: #ee5555;
-  --color-duoDarkGrayAlt: #121f25;
-
-  --shadow-duoLightGreenShadow: 0 8px #262e57;
 
   --font-din: DIN;
-  --shadow-duoPinkShadow: #cc6ba7;
 
   --shadow-mainShadow: 0 5px 0 #262e57;
   --shadow-mainCircleShadow: 0 8px 0 #262e57;
 
-  --shadow-duoGreenShadow: 0 5px 0 #262e57;
-  --shadow-duoPinkShadow: 0 5px 0 #cc6ba7;
   --shadow-duoGrayLockedShadow: 0 8px 0 #2b383f;
   --shadow-duoGrayLockedCircleShadow: 0 5px 0 #2b383f;
-  --shadow-duoGreenCircleShadow: 0 8px 0 #262e57;
-  --shadow-duoPinkCircleShadow: 0 8px #cc6ba7;
-  --shadow-duoBlueShadow: 0 5px 0 #4099d6;
-  --shadow-duoBlueCircleShadow: 0 8px #4099d6;
   --shadow-duoGrayBorderShadow: 0 3px #37464f;
 }
 

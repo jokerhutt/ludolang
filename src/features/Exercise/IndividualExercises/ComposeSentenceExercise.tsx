@@ -1,12 +1,9 @@
-import Lottie from "lottie-react";
 import type { Exercise, ExerciseOption } from "../../../Types/Catalog/ExerciseType.ts";
 import { OptionsList } from "../Options/OptionsList.tsx";
 import { SelectionOptionButton } from "../Options/SelectionOptionButton";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeInStagger } from "../../../Effects/FadeInAnimation.ts";
 import { getRowsForAnswerField, splitAnswerFieldIntoRows } from "../../../Utils/UI/answerFieldUtils.ts";
-import { useRandomLottie } from "../../../Hooks/Animation/useRandomLottie.tsx";
-import { EX_ANIMATIONS } from "../../../Constants/UIConstants/animationPaths.ts";
 
 type ComponentSentenceExerciseProps = {
   exercise: Exercise;
@@ -22,22 +19,15 @@ export function ComposeSentenceExercise({
   removeOption,
 }: ComponentSentenceExerciseProps) {
 
-  const animationData = useRandomLottie(EX_ANIMATIONS);
 
   const plannedRows = getRowsForAnswerField(exercise, 30);
   const displayRows = splitAnswerFieldIntoRows(currentSelectedOptions, 30);
 
-    if (!!animationData) return (
+    return (
       <AnimatePresence>
         <motion.div {...fadeInStagger(0.4)} className="w-full h-full flex flex-col gap-2">
           <div className="w-full flex justify-start gap-4">
-            <Lottie
-              animationData={animationData}
-              loop={true}
-              autoplay
-              className="w-30 h-auto"
-            />
-            <div className="mt-10 p-4 border h-fit border-duoGrayBorder rounded-xl">
+            <div className="my-10 p-4 border h-fit border-duoGrayBorder rounded-xl">
               <p className="text-white font-light text-xl">{exercise.prompt}</p>
             </div>
           </div>

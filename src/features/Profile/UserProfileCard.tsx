@@ -32,7 +32,7 @@ export function UserProfileCard({
         {isOwnPage && (
           <div
             onClick={(e) => editAvatar(e)}
-            className="absolute z-2 hover:cursor-pointer rounded-2xl p-2 bg-black/8 flex items-center justify-center border top-5 right-9"
+            className="absolute z-2 hover:cursor-pointer rounded-2xl p-2 bg-mainAccent flex items-center justify-center border top-2 right-2"
           >
             <RiPencilFill className="h-8 w-8" />
           </div>

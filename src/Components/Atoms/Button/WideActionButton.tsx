@@ -23,9 +23,9 @@ export function WideActionButton({
   icon,
   activeColor = "active:shadow-none active:translate-y-[5px] shadow-mainShadow bg-mainAccent",
   disabledColor = "bg-mainAlt",
-  activeTextColor = "text-white",
+  activeTextColor = "text-black",
   incorrectColor = "bg-red-400",
-  incorrectTextColor = "text-duoBackground",
+  incorrectTextColor = "text-mainDark",
   isIncorrect,
   disabledTextColor = "text-white/40",
 }: WideActionButtonProps) {

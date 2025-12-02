@@ -11,7 +11,7 @@ export function UserRow({ userId, specialBg}: UserRow) {
   const { data: user } = useSuspenseQuery(qo.user(userId));
   const navigate = useNavigate();
   const realUser = user;
-  const style = specialBg ? "bg-duoBlue/20" : "";
+  const style = specialBg ? "bg-mainAccent/20" : "";
 
   return (
     <div

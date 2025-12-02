@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router";
 import { useCallback, useEffect, useState } from "react";
-import { useRandomLottie } from "../../Animation/useRandomLottie.tsx";
 import { useLottie } from "../../Animation/useLottie.tsx";
-import { EL_ANIMATIONS, STREAK_ANIMATION } from "../../../Constants/UIConstants/animationPaths.ts";
+import { STREAK_ANIMATION, TROPHY_ANIMATION } from "../../../Constants/UIConstants/animationPaths.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { qo } from "../../../Constants/QueryConstants/queries.ts";
 import {useLessonComplete} from "../../Queries/Mutations/useLessonComplete.tsx";
@@ -39,7 +38,7 @@ export function useLessonCompleteFlow({
   const navigate = useNavigate();
   const { data: user } = useSuspenseQuery(qo.currentUser())
 
-  const animationData = useRandomLottie(EL_ANIMATIONS);
+  const animationData = useLottie(TROPHY_ANIMATION);
   const streakAnimationData = useLottie(STREAK_ANIMATION);
 
   const lessonIdForMutation: string = lessonId ?? "";

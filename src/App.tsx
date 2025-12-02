@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-        <div className="w-dvw h-dvh flex flex-col overflow-auto bg-duoBackground">
+        <div className="w-dvw h-dvh flex flex-col overflow-auto bg-mainDark">
           <Routes>
             <Route path="/auth" element={<LoginPage />} />
 

@@ -9,7 +9,7 @@ export function LoginPage() {
       <div className="w-full flex items-center flex-col">
         <h1 className="text-3xl">LudoLang</h1>
         <p className="text-center font-light py-2 text-lg">
-          This is a non-commercial language-learning website inspired by
+          This is a non-commercial language-learning website heavily inspired by
           Duolingo, built as a personal practice project.
         </p>
       </div>

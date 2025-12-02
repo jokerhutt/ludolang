@@ -1,5 +1,8 @@
 import { AnimatePresence } from "framer-motion";
-import type { Exercise, ExerciseOption } from "../../Types/Catalog/ExerciseType.ts";
+import type {
+  Exercise,
+  ExerciseOption,
+} from "../../Types/Catalog/ExerciseType.ts";
 import { ClozeExercise } from "./IndividualExercises/ClozeExercise";
 import { ComposeSentenceExercise } from "./IndividualExercises/ComposeSentenceExercise";
 
@@ -45,7 +48,7 @@ export function ExerciseComponent({
 
   return (
     <AnimatePresence>
-      <div  className="w-full h-full px-2 gap-2 flex flex-col">
+      <div className="w-full h-full px-2 gap-2 flex flex-col">
         <h1 className="text-white text-2xl">{title}</h1>
         {toRender()}
       </div>

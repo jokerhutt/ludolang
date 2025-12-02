@@ -5,10 +5,10 @@ import { useNavigate } from "react-router";
 import { groupArrayElements } from "../../../Utils/UI/avatarUtils.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { qo } from "../../../Constants/QueryConstants/queries.ts";
-import {useUpdateAvatar} from "../../../Hooks/Queries/Mutations/useUpdateAvatar.tsx";
+import { useUpdateAvatar } from "../../../Hooks/Queries/Mutations/useUpdateAvatar.tsx";
 
 export function AvatarPage() {
-  const { data: currentUser } = useSuspenseQuery(qo.currentUser())
+  const { data: currentUser } = useSuspenseQuery(qo.currentUser());
   const { data: avatars } = useSuspenseQuery(qo.avatars());
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ export function AvatarPage() {
   const [selectedAvatar, setSelectedAvatar] = useState(currentUser.pfpSrc);
 
   const showSelectedBorder = (avatarUrl: string) =>
-    avatarUrl == selectedAvatar ? "border-6 border-duoBlue" : "";
+    avatarUrl == selectedAvatar ? "border-6 border-mainAccent" : "";
 
   const updateAvatarMutation = useUpdateAvatar();
 
@@ -48,23 +48,16 @@ export function AvatarPage() {
           <UserWideImage imgSrc={selectedAvatar} />
         </div>
 
-        <div className="w-full pt-10 flex gap-8 flex-col items-center px-4">
-          {avatarPairs.map((pair, idx) => (
-            <div
-              key={idx}
-              className="w-full flex justify-between items-center gap-6"
-            >
-              {pair.map((avatarUrl, i) => (
-                <img
-                  onClick={() => setSelectedAvatar(avatarUrl)}
-                  key={i}
-                  className={`min-h-14 max-h-14 h-14 hover:cursor-pointer hover:opacity-85 lg:min-h-30 lg:max-h-30 lg:h-30 w-full rounded-xl object-cover ${showSelectedBorder(
-                    avatarUrl
-                  )}`}
-                  src={avatarUrl}
-                />
-              ))}
-            </div>
+        <div className="w-full pt-10 px-4 grid grid-cols-3 lg:grid-cols-4 gap-10 auto-cols-max">
+          {avatars.map((avatarUrl: string, i: number) => (
+            <img
+              onClick={() => setSelectedAvatar(avatarUrl)}
+              key={i}
+              className={`h-20 w-20 hover:cursor-pointer hover:opacity-85 lg:h-30 lg:w-30 rounded-full object-cover ${showSelectedBorder(
+                avatarUrl
+              )}`}
+              src={avatarUrl}
+            />
           ))}
         </div>
       </div>

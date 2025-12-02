@@ -17,7 +17,7 @@ export function LogoutButton({ show }: LogoutButtonProps) {
     return (
       <div className="w-full px-4 py-2 flex items-end h-full">
         <WideActionButton
-          activeColor="bg-duoBackground border border-duoGrayLocked active:shadow-none active:translate-y-[5px] shadow-duoGrayLockedCircleShadow"
+          activeColor="bg-mainDark border border-mainAlt active:shadow-none active:translate-y-[5px] shadow-mainShadow"
           activeTextColor="text-duoRed/80"
           activeText="Sign Out"
           onSubmit={() => logout()}

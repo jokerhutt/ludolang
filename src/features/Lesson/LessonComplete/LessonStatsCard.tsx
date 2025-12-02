@@ -16,10 +16,10 @@ export function LessonStatsCard({
   score,
   scoreSign,
   scoreIcon,
-  mainColor = "bg-duoGreen",
-  altBgColor = "bg-duoBackground",
-  mainTextColor = "text-duoGreen",
-  altTextColor = "text-duoBackground",
+  mainColor = "bg-mainAccent",
+  altBgColor = "bg-mainDark",
+  mainTextColor = "text-mainAccent",
+  altTextColor = "text-mainDark",
 }: LessonStatsCardProps) {
   return (
     <div

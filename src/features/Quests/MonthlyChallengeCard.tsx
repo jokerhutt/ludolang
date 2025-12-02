@@ -14,11 +14,11 @@ export function MonthlyChallengeCard() {
   return (
     <div className="w-full p-4 flex gap-4 flex-col bg-main">
       <div className="flex w-full">
-        <div className="bg-white py-1 px-2 rounded-lg">
+        <div className="bg-mainAccent py-1 px-2 rounded-lg">
           <p className="text-main">{currentMonth}</p>
         </div>
       </div>
-      <div className="w-full flex flex-col gap-4 p-4 bg-duoBackground rounded-xl">
+      <div className="w-full flex flex-col gap-4 p-4 bg-mainDark rounded-xl">
         <p className="text-white text-lg">Complete {total} quests</p>
         <MonthlyChallengeProgressBar completed={completed} total={total} />
       </div>

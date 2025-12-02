@@ -1,13 +1,15 @@
+import { GemsIcon } from "../../../Components/Atoms/Icons/GemsIcon";
+import { StreakIcon } from "../../../Components/Atoms/Icons/StreakIcon";
 import { ContentWidget } from "../../../Components/Atoms/Widget/ContentWidget";
 
 type ProfileStatsWidgetProps = {
-  iconPath: string;
+  icon: "streak" | "xp";
   statDescription: string;
   count: number;
 };
 
 export function ProfileStatsWidget({
-  iconPath,
+  icon,
   statDescription,
   count,
 }: ProfileStatsWidgetProps) {
@@ -15,7 +17,7 @@ export function ProfileStatsWidget({
     <ContentWidget padding="p-2">
       <div className="w-full flex gap-2">
         <div className="w-10 flex justify-center">
-          <img className="h-6" src={iconPath} />
+          {icon == "streak" ? <StreakIcon /> : <GemsIcon />}
         </div>
         <div className="w-full flex flex-col">
           <p className="text-white text-lg">{count}</p>

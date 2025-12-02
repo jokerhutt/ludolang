@@ -16,12 +16,12 @@ export function FollowButton({ isFollowing, handleFollow }: FollowButtonProps) {
         onSubmit={handleFollow}
         isActive={isFollowing}
         icon={icon}
-        disabledTextColor={"text-duoBackground"}
-        activeTextColor={"text-duoDarkGreen"}
+        disabledTextColor={"text-black"}
+        activeTextColor={"text-darkGreen"}
         activeText={"Following"}
-        disabledColor={"bg-duoBlue shadow-duoBlueCircleShadow"}
+        disabledColor={"bg-mainAccent shadow-mainCircleShadow"}
         activeColor={
-          "bg-duoBackground border border-duoGrayLocked active:shadow-none active:translate-y-[5px] shadow-duoGrayLockedCircleShadow"
+          "bg-mainDark border border-mainAlt active:shadow-none active:translate-y-[5px] shadow-mainShadow"
         }
         text={"Follow"}
         height="h-12"

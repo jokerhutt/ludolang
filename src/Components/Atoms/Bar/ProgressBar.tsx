@@ -25,7 +25,7 @@ export function ProgressBar({
   const barColorToShow =
     showGoldOnComplete && completed == total ? "bg-mainAccent" : barColor;
   const textColorToShow =
-    showGoldOnComplete && completed == total ? "text-duoBackground" : textColor;
+    showGoldOnComplete && completed == total ? "text-mainDark" : textColor;
 
   return (
     <div className="w-full relative">

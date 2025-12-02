@@ -3,7 +3,7 @@ import type { LessonType } from "../../Types/Catalog/LessonType.ts";
 
 export const checkButtonStyle = (isSelected: boolean) => {
   isSelected
-    ? "active:shadow-none active:translate-y-[5px] shadow-duoGreenShadow bg-duoGreen"
+    ? "active:shadow-none active:translate-y-[5px] shadow-mainShadow bg-mainAccent"
     : "bg-duoGrayBorder";
 };
 

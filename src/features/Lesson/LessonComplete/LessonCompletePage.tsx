@@ -52,7 +52,7 @@ export function LessonCompletePage() {
           <WideActionButton
             text="End Lesson"
             isActive={true}
-            activeColor="active:shadow-none active:translate-y-[5px] shadow-duoLightGreenShadow bg-duoLightGreen"
+            activeColor="active:shadow-none active:translate-y-[5px] shadow-mainShadow bg-mainAccent"
             onSubmit={() => handleContinueAction()}
           />
         </div>
@@ -71,7 +71,7 @@ export function LessonCompletePage() {
           <WideActionButton
             text="End Lesson"
             isActive={true}
-            activeColor="active:shadow-none active:translate-y-[5px] shadow-duoLightGreenShadow bg-duoLightGreen"
+            activeColor="active:shadow-none active:translate-y-[5px] shadow-mainShadow bg-mainAccent"
             onSubmit={() => handleContinueAction()}
           />
         </div>

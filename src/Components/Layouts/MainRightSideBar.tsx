@@ -14,7 +14,7 @@ export function MainRightSideBar() {
   const { data: course } = useCourse(currentUser.currentCourseId);
 
   return (
-    <aside className="hidden border-l border-duoGrayBorder lg:flex flex-col bg-duoBackground w-90 xl:w-110 2xl:w-180">
+    <aside className="hidden border-l border-mainAlt lg:flex flex-col bg-mainDark w-90 xl:w-110 2xl:w-180">
       <div className="flex py-6 px-8 gap-8 sticky top-0 flex-col w-full">
         <div className="w-full flex justify-between">
           {userCourseProgress && (

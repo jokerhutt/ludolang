@@ -8,7 +8,7 @@ export function UserWideImage({ imgSrc }: UserWideImageProps) {
   return (
     <AnimatePresence>
       <img
-        className="w-full h-50 lg:h-66 object-cover rounded-xl"
+        className="w-auto h-50 lg:h-66 object-cover"
         src={imgSrc}
       />
     </AnimatePresence>

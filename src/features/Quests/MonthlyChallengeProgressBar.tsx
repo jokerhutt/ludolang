@@ -14,7 +14,7 @@ export function MonthlyChallengeProgressBar({
 
   const starIcon = completed ? "/icon-images/STAR_COMPLETE.svg" : "/icon-images/STAR_INCOMPLETE.svg"
 
-  const bgcolor = "text-duoBackground bg-mainAccent";
+  const bgcolor = "text-mainDark bg-mainAccent";
 
   return (
     <ProgressBar

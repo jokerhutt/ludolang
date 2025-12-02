@@ -33,11 +33,11 @@ export function UserMainStats({
       </div>
       <div className="flex gap-2 items-center">
         <StreakIcon />
-        <p className="text-xl text-duoOrange">{currentUser.streakLength}</p>
+        <p className="text-xl text-white">{currentUser.streakLength}</p>
       </div>
       <div className="flex gap-2 items-center">
         <GemsIcon />
-        <p className="text-xl text-mainAccent">{currentUser.points}</p>
+        <p className="text-xl text-white">{currentUser.points}</p>
       </div>
     </div>
   );

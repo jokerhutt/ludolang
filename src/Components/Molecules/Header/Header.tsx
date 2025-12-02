@@ -12,7 +12,7 @@ export function Header({
   children,
   padding = "px-2",
   height = "h-14",
-  background = "bg-duoBackground",
+  background = "bg-mainDark",
   showOnLg = false,
 }: HeaderProps) {
   return (

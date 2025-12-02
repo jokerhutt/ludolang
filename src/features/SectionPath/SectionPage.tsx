@@ -44,7 +44,7 @@ export function SectionPage() {
       <UnitBanner currentUnit={currentUnit} />
       <div
         ref={scrollContainerRef}
-        className="w-full h-full pb-20 lg:pb-0 bg-duoBackground overscroll-contain lg:overflow-visible"
+        className="w-full h-full pb-20 lg:pb-0 bg-mainDark overscroll-contain lg:overflow-visible"
       >
         <AnimatePresence>
           {units.map((unit: UnitType, index: number) => (

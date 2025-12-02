@@ -12,7 +12,7 @@ export function FriendsList({ toDisplay }: FriendsListProps) {
     <AnimatePresence>
       <motion.div
         {...fadeInStagger(1)}
-        className="w-full flex scrollbar-duoGreen overflow-y-auto max-h-160 my-2 px-4 flex-col"
+        className="w-full flex scrollbar-mainAccent overflow-y-auto max-h-160 my-2 px-4 flex-col"
       >
         {toDisplay.map((userId) => (
           <UserRow key={userId} userId={userId} />

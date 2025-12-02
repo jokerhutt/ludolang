@@ -11,10 +11,10 @@ export function StreakCompleteCard({
   newCount,
   animationData,
 }: StreakCompleteCardProps) {
-  const completeLessonExtra = new Audio("/audio/completeLessonExtra.mp3");
+    const completeSound = new Audio("/audio/completeLesson.mp3");
 
   useEffect(() => {
-    completeLessonExtra.play();
+    completeSound.play();
   }, []);
 
   return (
@@ -25,8 +25,8 @@ export function StreakCompleteCard({
         autoplay
         className="w-full h-80"
       />
-      <h2 className="text-6xl text-duoOrange">{newCount}</h2>
-      <h3 className="text-duoOrange text-3xl">Day Streak</h3>
+      <h2 className="text-6xl text-mainAccent">{newCount}</h2>
+      <h3 className="text-mainAccent text-3xl">Day Streak</h3>
     </div>
   );
 }

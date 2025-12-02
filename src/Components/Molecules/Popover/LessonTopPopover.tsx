@@ -22,7 +22,7 @@ export function LessonTopPopover({
       {open && (
         <div className={`absolute left-1/2 -translate-x-1/2 bottom-17`}>
           <button
-            className={`rounded-xl bg-duoBackground border ${offset} border-duoGrayBorder py-2 px-4 shadow-lg bob`}
+            className={`rounded-xl bg-mainDark border ${offset} border-duoGrayBorder py-2 px-4 shadow-lg bob`}
           >
             <div
               className={`flex w-full text-lg text-center font-bold whitespace-nowrap text-mainAccent`}

@@ -5,5 +5,5 @@ type StreakIconProps = {
 };
 
 export function StreakIcon({ height = "h-7" }: StreakIconProps) {
-  return <HeroIcon iconName="FireIcon" solid className={`${height} text-orange-400`}/>;
+  return <HeroIcon iconName="FireIcon" solid className={`${height} text-mainAccent`}/>;
 }

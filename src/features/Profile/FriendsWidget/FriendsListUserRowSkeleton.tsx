@@ -8,7 +8,7 @@ export function FriendsListUserRowSkeleton() {
         />
       </div>
       <div className="w-full flex flex-col">
-        <p className="text-xl rounded-2xl text-duoGrayLocked bg-duoGrayLocked">
+        <p className="text-xl rounded-2xl text-mainAlt bg-mainAlt">
           ______
         </p>
       </div>

@@ -27,7 +27,7 @@ export function AvatarHeader({ currentUserId, submit }: AvatarHeaderProps) {
         </p>
         <p
           onClick={submit}
-          className="w-20 hover:cursor-pointer text-end text-duoBlue text-xl"
+          className="w-20 hover:cursor-pointer text-end text-mainAccent text-xl"
         >
           DONE
         </p>
